@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EvaOps | Legal Smart Contract Drafter</title>
+  <meta name="description" content="From brief to binding in minutes. AI-powered legal contract drafting that reflects your specific terms, jurisdiction, and risk profile." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">
+        <span class="logo-bracket">[</span>EvaOps<span class="logo-bracket">]</span>
+      </a>
+
+      <nav class="navbar-links" aria-label="Primary navigation">
+        <a href="#platform"  class="nav-item active">Platform</a>
+        <a href="#solutions" class="nav-item">Solutions</a>
+        <a href="#resources" class="nav-item">Resources</a>
+        <a href="#pricing"   class="nav-item">Pricing</a>
+      </nav>
+
+      <div class="navbar-actions">
+        <button class="btn-client-login" id="clientLoginBtn">Client Login</button>
+        <button class="btn-get-started"  id="getStartedBtn">Get Started</button>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#platform"  class="mobile-nav-item">Platform</a>
+      <a href="#solutions" class="mobile-nav-item">Solutions</a>
+      <a href="#resources" class="mobile-nav-item">Resources</a>
+      <a href="#pricing"   class="mobile-nav-item">Pricing</a>
+      <button class="btn-get-started mobile-get-started" id="mobileGetStarted">Get Started</button>
+    </div>
+  </header>
+
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero-section" id="platform">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow-wrap reveal">
+        <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+        <span class="hero-eyebrow-text">EvaOps</span>
+        <span class="hero-eyebrow-line" aria-hidden="true"></span>
+      </div>
+
+      <h1 class="hero-title reveal reveal-delay-1">
+        LEGAL SMART<br/>CONTRACT DRAFTER
+      </h1>
+
+      <p class="hero-subtitle reveal reveal-delay-2">FROM BRIEF TO BINDING IN MINUTES</p>
+
+      <p class="hero-desc reveal reveal-delay-3">
+        Input your deal parameters. Receive a structured, clause-complete
+        contract draft — not a template, a reasoned document that reflects
+        your specific terms, jurisdiction, and risk profile.
+      </p>
+
+      <div class="hero-tags reveal reveal-delay-3">
+        <span class="hero-tag">↓ 4HRS → 12MIN DRAFT TIME</span>
+        <span class="hero-tag">CONSISTENT LOGIC</span>
+        <span class="hero-tag">JURISDICTION-AWARE</span>
+      </div>
+
+      <div class="hero-btns reveal reveal-delay-4">
+        <button class="btn-hero-primary ripple" id="startDraftingBtn">Start Drafting</button>
+        <button class="btn-hero-secondary" id="watchDemoBtn">
+          <span class="play-ring" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="9,7 17,12 9,17"/></svg>
+          </span>
+          Watch Demo
+        </button>
+      </div>
+
+      <div class="hero-stats reveal reveal-delay-4">
+        <div class="stat-item">
+          <span class="stat-num" data-target="2400">0</span>
+          <span class="stat-label">Contracts Drafted</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="98">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Clause Accuracy</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="47">0</span>
+          <span class="stat-label">Jurisdictions</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating document preview -->
+    <div class="hero-doc-preview reveal reveal-delay-2" aria-hidden="true">
+      <div class="doc-card">
+        <div class="doc-card__header">
+          <span class="doc-card__type">NON-DISCLOSURE AGREEMENT</span>
+          <span class="doc-status">
+            <span class="doc-status-dot"></span>DRAFTING
+          </span>
+        </div>
+        <div class="doc-card__body">
+          <div class="doc-line doc-line--title"></div>
+          <div class="doc-line doc-line--sub"></div>
+          <div class="doc-clause">
+            <span class="clause-num">§ 1.</span>
+            <div class="clause-lines">
+              <div class="doc-line"></div>
+              <div class="doc-line doc-line--short"></div>
+            </div>
+          </div>
+          <div class="doc-clause">
+            <span class="clause-num">§ 2.</span>
+            <div class="clause-lines">
+              <div class="doc-line"></div>
+              <div class="doc-line doc-line--med"></div>
+            </div>
+          </div>
+          <div class="doc-clause">
+            <span class="clause-num">§ 3.</span>
+            <div class="clause-lines">
+              <div class="doc-line"></div>
+              <div class="doc-line doc-line--short"></div>
+              <div class="doc-line doc-line--med"></div>
+            </div>
+          </div>
+        </div>
+        <div class="doc-card__footer">
+          <div class="doc-progress-bar">
+            <div class="doc-progress-fill" id="docProgressFill"></div>
+          </div>
+          <span class="doc-progress-label" id="docProgressLabel">Generating clauses…</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TRUST BAR ═══ -->
+  <div class="trust-bar">
+    <div class="trust-bar__inner">
+      <span class="trust-label">TRUSTED BY LEGAL TEAMS AT</span>
+      <span class="trust-logo">LINKLATERS</span>
+      <span class="trust-logo">CLIFFORD CHANCE</span>
+      <span class="trust-logo">DIFC COURTS</span>
+      <span class="trust-logo">FRESHFIELDS</span>
+      <span class="trust-logo">ALLEN &amp; OVERY</span>
+    </div>
+  </div>
+
+
+  <!-- ═══ VALUE PROPOSITION ═══ -->
+  <section class="value-section" id="solutions">
+    <div class="value-inner">
+
+      <div class="value-left reveal">
+        <p class="section-eyebrow">Why EvaOps</p>
+        <h2 class="value-title">
+          A reasoned document,<br/>not just a template.
+        </h2>
+        <div class="value-rule" aria-hidden="true"></div>
+        <a href="#resources" class="value-link">
+          Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="value-right reveal reveal-delay-2">
+        <div class="value-desc-card">
+          <p class="value-desc">
+            Input your deal parameters. Receive a structured, clause-complete
+            contract draft — not a template, a reasoned document that reflects
+            your specific terms, jurisdiction, and risk profile. EvaOps agents
+            analyze the underlying logic of your transaction to ensure every
+            clause serves your strategic intent.
+          </p>
+          <div class="value-features">
+            <div class="value-feature">
+              <span class="vf-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9"/><path d="M16 16l2 2 4-4"/><line x1="8" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="13" y2="13"/></svg>
+              </span>
+              <div>
+                <p class="vf-title">Clause-Level Precision</p>
+                <p class="vf-body">Every clause is logically validated against jurisdiction-specific legal standards.</p>
+              </div>
+            </div>
+            <div class="value-feature">
+              <span class="vf-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              <div>
+                <p class="vf-title">Risk Profile Awareness</p>
+                <p class="vf-body">Counter-party risk, indemnity caps, and conflict resolution built-in automatically.</p>
+              </div>
+            </div>
+            <div class="value-feature">
+              <span class="vf-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <div>
+                <p class="vf-title">Natural Language Input</p>
+                <p class="vf-body">Describe your deal in plain language — EvaOps maps it to structured legal terms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ PROCESS / STEPS ═══ -->
+  <section class="process-section" id="resources">
+    <div class="process-header reveal">
+      <p class="process-eyebrow">Precision Engineering for Legal Teams</p>
+      <h2 class="process-title">Three steps to a court-ready document.</h2>
+      <p class="process-sub">Advanced logical validation for cross-border and complex agreements.</p>
+    </div>
+
+    <div class="process-cards">
+      <div class="process-card reveal">
+        <div class="process-step-num" aria-label="Step 1">01</div>
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="19" cy="17" r="3"/><path d="M21 19l1.5 1.5"/></svg>
+        </div>
+        <p class="process-step-label">Data Ingestion</p>
+        <p class="process-step-desc">We intake deal points via secure API or natural language brief, mapping over 200 distinct legal variables.</p>
+      </div>
+
+      <div class="process-connector" aria-hidden="true"></div>
+
+      <div class="process-card reveal reveal-delay-1">
+        <div class="process-step-num" aria-label="Step 2">02</div>
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v3.5M17.5 17.5H14"/></svg>
+        </div>
+        <p class="process-step-label">Logic Synthesis</p>
+        <p class="process-step-desc">The engine identifies conflicts, calculates indemnity caps, and suggests counter-party risk mitigations automatically.</p>
+      </div>
+
+      <div class="process-connector" aria-hidden="true"></div>
+
+      <div class="process-card reveal reveal-delay-2">
+        <div class="process-step-num" aria-label="Step 3">03</div>
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <p class="process-step-label">Final Assembly</p>
+        <p class="process-step-desc">Output a court-ready PDF or Word document with integrated version control and signature workflows.</p>
+      </div>
+    </div>
+
+    <!-- Interactive clause explorer -->
+    <div class="clause-explorer reveal">
+      <div class="clause-explorer__header">
+        <p class="clause-explorer__label">SUPPORTED AGREEMENT TYPES</p>
+        <p class="clause-explorer__sub">Click any type to preview clause structure</p>
+      </div>
+      <div class="clause-tabs" role="tablist">
+        <button class="clause-tab clause-tab--active" role="tab" data-type="nda"  aria-selected="true">NDA</button>
+        <button class="clause-tab" role="tab" data-type="mna"  aria-selected="false">M&amp;A</button>
+        <button class="clause-tab" role="tab" data-type="sla"  aria-selected="false">SLA</button>
+        <button class="clause-tab" role="tab" data-type="jv"   aria-selected="false">Joint Venture</button>
+        <button class="clause-tab" role="tab" data-type="sha"  aria-selected="false">Shareholder</button>
+        <button class="clause-tab" role="tab" data-type="emp"  aria-selected="false">Employment</button>
+      </div>
+      <div class="clause-preview" id="clausePreview"><!-- filled by JS --></div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TESTIMONIAL ═══ -->
+  <section class="testimonial-section">
+    <div class="testimonial-inner reveal">
+      <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+      <blockquote class="testimonial-text">
+        "We reduced first-draft turnaround from four hours to under fifteen minutes.
+        EvaOps doesn't just assemble clauses — it understands the commercial logic
+        behind the transaction. That's a fundamentally different tool."
+      </blockquote>
+      <div class="testimonial-author">
+        <div class="ta-avatar">SC</div>
+        <div>
+          <p class="ta-name">Sarah Chen</p>
+          <p class="ta-role">Partner, Chen &amp; Partners LLP — Dubai (DIFC)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA BANNER ═══ -->
+  <section class="cta-section" id="pricing">
+    <div class="cta-grid-bg" aria-hidden="true"></div>
+    <div class="cta-inner">
+      <div class="cta-box reveal">
+        <div class="cta-copy">
+          <p class="cta-eyebrow">Enterprise Access</p>
+          <h2 class="cta-title">
+            Ready to automate<br/>your drafting desk?
+          </h2>
+          <a href="#pricing" class="cta-link">
+            View Enterprise Pricing
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <button class="btn-cta-main ripple" id="initDraftBtn">Initialize Draft</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="logo-bracket">[</span>EvaOps<span class="logo-bracket">]</span>
+          </a>
+          <p class="footer-tagline">Precision engineered legal automation<br/>for the global elite.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h3 class="footer-col-title">Platform</h3>
+            <ul class="footer-col-links">
+              <li><a href="#platform">Smart Drafting</a></li>
+              <li><a href="#solutions">Logic Verification</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">Resources</h3>
+            <ul class="footer-col-links">
+              <li><a href="#">Legal Blog</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Documentation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">Company</h3>
+            <ul class="footer-col-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 EvaOps Automation. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══ MODAL ═══ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div id="modalFormView">
+        <p class="modal-eyebrow">Enterprise Access</p>
+        <h2 class="modal-title" id="modalHeading">Initialize Your Draft</h2>
+        <p class="modal-sub">Tell us about your agreement. We'll configure your EvaOps instance and run a live contract generation demo on your deal parameters.</p>
+
+        <form id="draftForm" class="modal-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fullName">Full Name <span class="req">*</span></label>
+              <input id="fullName" type="text" class="form-input" placeholder="Alexandra Chen" required autocomplete="name"/>
+              <span class="form-error" id="err-fullName">Please enter your full name.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="firm">Law Firm / Company <span class="req">*</span></label>
+              <input id="firm" type="text" class="form-input" placeholder="Chen &amp; Partners LLP" required/>
+              <span class="form-error" id="err-firm">Please enter your firm or company.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="workEmail">Work Email <span class="req">*</span></label>
+            <input id="workEmail" type="email" class="form-input" placeholder="a.chen@chenlegal.com" required autocomplete="email"/>
+            <span class="form-error" id="err-workEmail">Please enter a valid work email.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="agreementType">Primary Agreement Type <span class="req">*</span></label>
+            <select id="agreementType" class="form-input form-select" required>
+              <option value="" disabled selected>Select agreement type…</option>
+              <option>Mergers &amp; Acquisitions (M&amp;A)</option>
+              <option>Non-Disclosure Agreement (NDA)</option>
+              <option>Service Level Agreement (SLA)</option>
+              <option>Employment &amp; Contractor Agreements</option>
+              <option>Joint Venture Agreements</option>
+              <option>Shareholder Agreements</option>
+              <option>Other / Multiple Types</option>
+            </select>
+            <span class="form-error" id="err-agreementType">Please select an agreement type.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="jurisdiction">Primary Jurisdiction <span class="req">*</span></label>
+            <select id="jurisdiction" class="form-input form-select" required>
+              <option value="" disabled selected>Select jurisdiction…</option>
+              <option>United Arab Emirates (DIFC)</option>
+              <option>Kingdom of Saudi Arabia</option>
+              <option>United Kingdom (English Law)</option>
+              <option>United States (Delaware)</option>
+              <option>European Union</option>
+              <option>Singapore (SIAC)</option>
+              <option>Other / Cross-border</option>
+            </select>
+            <span class="form-error" id="err-jurisdiction">Please select a jurisdiction.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dealNote">Deal Brief <span class="form-optional">(optional)</span></label>
+            <textarea id="dealNote" class="form-input form-textarea" rows="3" placeholder="Briefly describe your transaction or agreement requirements…"></textarea>
+          </div>
+
+          <button type="submit" class="btn-form-submit ripple" id="submitBtn">Initialize Draft →</button>
+        </form>
+      </div>
+
+      <div class="modal-success" id="modalSuccess">
+        <div class="success-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <p class="success-title">Draft Initialized</p>
+        <p class="success-sub">We'll send your configuration link and a calendar invite within 24 hours.</p>
+        <button class="btn-hero-secondary" id="modalDoneBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

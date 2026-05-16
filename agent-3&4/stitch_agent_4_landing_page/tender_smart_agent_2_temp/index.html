@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> EvaOps Sales & Tender Smart Agent</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon"><i class="fas fa-robot"></i></span>
+        <span class="logo-text">EvaOps AI</span>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#lifecycle">How It Works</a></li>
+        <li><a href="#strategy">Strategy</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact" class="nav-cta">Deploy Agent</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>AGENT 01 &bull; LIVE PULSE</span>
+      </div>
+      <h1 class="hero-title">
+        Sales &amp; Tender<br/>
+        <span class="gradient-text">Smart Agent</span>
+      </h1>
+      <p class="hero-tagline">WIN MORE. BID SMARTER.</p>
+      <p class="hero-desc">
+        Reads tender documents, extracts compliance requirements, flags gaps
+        in your submission, and drafts response sections overnight.
+        Your team focuses on strategy. The agent handles the grind.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-badge">
+          <i class="fas fa-arrow-trend-up"></i>
+          <span>3× More Bids Submitted</span>
+        </div>
+        <div class="stat-badge">
+          <i class="fas fa-shield-check"></i>
+          <span>Compliance Gaps Caught Early</span>
+        </div>
+        <div class="stat-badge">
+          <i class="fas fa-moon"></i>
+          <span>Runs Overnight</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> Initialize Demo
+        </a>
+        <a href="#lifecycle" class="btn btn-outline">
+          <i class="fas fa-file-alt"></i> Technical Specs
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS / STATS BANNER -->
+  <section class="stats-banner" id="solutions">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+        <p>Compliance Accuracy</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="3">0</span><span class="stat-suffix">×</span>
+        <p>More Bids Per Month</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="72">0</span><span class="stat-suffix">%</span>
+        <p>Reduction in Review Time</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+        <p>Tenders Processed</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTELLIGENT TENDER LIFECYCLE -->
+  <section class="lifecycle" id="lifecycle">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-label">Core Capabilities</p>
+        <h2 class="section-title">Intelligent Tender Lifecycle</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          From document ingestion to final submission — fully automated,
+          always compliant, and built for high-stakes procurement environments.
+        </p>
+      </div>
+      <div class="lifecycle-grid">
+
+        <div class="lifecycle-card" data-index="01">
+          <div class="card-icon">
+            <i class="fas fa-satellite-dish"></i>
+          </div>
+          <div class="card-number">01</div>
+          <h3>Autonomous Discovery</h3>
+          <p>
+            Our agent scans public portals, procurement platforms, and
+            government databases in real-time, identifying high-value tender
+            opportunities before competitors even know they exist. Advanced
+            semantic matching aligns every opportunity to your core capabilities.
+          </p>
+          <div class="card-tag">
+            <span class="tag-dot active"></span> Active Monitoring
+          </div>
+        </div>
+
+        <div class="lifecycle-card" data-index="02">
+          <div class="card-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="card-number">02</div>
+          <h3>Nuanced Analysis</h3>
+          <p>
+            Deep-dive risk assessment, compliance mapping, and competitor
+            modeling powered by historical data synthesis. The agent flags
+            ambiguities, scoring criteria, and hidden evaluation weights
+            so your bid team enters every submission fully informed.
+          </p>
+          <div class="card-tag">
+            <span class="tag-dot"></span> AI-Powered Insights
+          </div>
+        </div>
+
+        <div class="lifecycle-card" data-index="03">
+          <div class="card-icon">
+            <i class="fas fa-pen-nib"></i>
+          </div>
+          <div class="card-number">03</div>
+          <h3>Precision Drafting</h3>
+          <p>
+            Synthesizing technical requirements, evaluation criteria, and
+            your company's past-performance data into winning bid narratives
+            with 98.4% compliance accuracy. Every section is drafted,
+            reviewed, and gap-checked overnight — ready for your team
+            to review at dawn.
+          </p>
+          <div class="card-tag">
+            <span class="tag-dot active"></span> 98.4% Accuracy
+          </div>
+        </div>
+
+        <div class="lifecycle-card" data-index="04">
+          <div class="card-icon">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <div class="card-number">04</div>
+          <h3>Optimized Submission</h3>
+          <p>
+            End-to-end compliance verification and automated filing through
+            secure API bridges to procurement portals. Zero-touch logistics
+            for mission-critical deadlines — with audit trails, version
+            control, and confirmation receipts for every submission.
+          </p>
+          <div class="card-tag">
+            <span class="tag-dot"></span> Zero-Touch Filing
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STRATEGY ENGINE -->
+  <section class="strategy" id="strategy">
+    <div class="section-container strategy-layout">
+      <div class="strategy-visual">
+        <div class="visual-card">
+          <div class="visual-glow"></div>
+          <div class="circuit-board">
+            <div class="circuit-line h"></div>
+            <div class="circuit-line v"></div>
+            <div class="circuit-line h2"></div>
+            <div class="circuit-node n1"></div>
+            <div class="circuit-node n2"></div>
+            <div class="circuit-node n3"></div>
+            <div class="circuit-node n4"></div>
+            <div class="chip">
+              <i class="fas fa-microchip"></i>
+              <span>EvaOps AI</span>
+            </div>
+          </div>
+          <div class="visual-stats">
+            <div class="v-stat">
+              <i class="fas fa-bolt"></i>
+              <span>Processing 847 documents</span>
+            </div>
+            <div class="v-stat">
+              <i class="fas fa-check-circle"></i>
+              <span>23 bids ready for review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="strategy-content">
+        <p class="section-label">Intelligence Layer</p>
+        <h2 class="section-title">The Strategy Engine</h2>
+        <div class="title-underline"></div>
+        <p class="strategy-intro">
+          Behind every winning bid is a data-driven strategy. Our AI engine
+          runs continuous analysis to ensure your submissions are not just
+          compliant — but competitive.
+        </p>
+        <div class="strategy-items">
+
+          <div class="strategy-item">
+            <div class="strategy-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="strategy-text">
+              <h4>Predictive Win Modeling</h4>
+              <p>
+                Simulate thousands of tender outcomes based on multi-variate
+                market conditions, historical award trends, and evaluator
+                scoring patterns to maximize your probability of success.
+              </p>
+            </div>
+          </div>
+
+          <div class="strategy-item">
+            <div class="strategy-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="strategy-text">
+              <h4>Dynamic Re-Calibration</h4>
+              <p>
+                Agents pivot strategies in real-time as new addendums,
+                buyer clarifications, or competitor signals emerge during
+                the live bid window — keeping your submission ahead of the curve.
+              </p>
+            </div>
+          </div>
+
+          <div class="strategy-item">
+            <div class="strategy-icon">
+              <i class="fas fa-comment-dots"></i>
+            </div>
+            <div class="strategy-text">
+              <h4>Sentiment &amp; Intent Analysis</h4>
+              <p>
+                Decode the unspoken priorities of procurement boards through
+                deep linguistic analysis of RFP documents, buyer communications,
+                and historical evaluation feedback reports.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-label">Transparent Pricing</p>
+        <h2 class="section-title">Choose Your Plan</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          Scalable plans for teams of all sizes — from growing SMEs
+          to enterprise procurement divisions.
+        </p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="plan-label">Starter</div>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">499</span>
+            <span class="period">/mo</span>
+          </div>
+          <p class="plan-desc">Perfect for teams submitting up to 10 bids per month.</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Up to 10 tender submissions/month</li>
+            <li><i class="fas fa-check"></i> Compliance gap detection</li>
+            <li><i class="fas fa-check"></i> Automated draft generation</li>
+            <li><i class="fas fa-check"></i> Email support</li>
+            <li class="disabled"><i class="fas fa-times"></i> Predictive win modeling</li>
+            <li class="disabled"><i class="fas fa-times"></i> API integrations</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline full-width">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-label">Professional</div>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount">1,299</span>
+            <span class="period">/mo</span>
+          </div>
+          <p class="plan-desc">For active bid teams scaling their win rate.</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Unlimited tender submissions</li>
+            <li><i class="fas fa-check"></i> Advanced compliance mapping</li>
+            <li><i class="fas fa-check"></i> Overnight drafting engine</li>
+            <li><i class="fas fa-check"></i> Predictive win modeling</li>
+            <li><i class="fas fa-check"></i> Sentiment analysis</li>
+            <li class="disabled"><i class="fas fa-times"></i> Dedicated success manager</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary full-width">Start Free Trial</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="plan-label">Enterprise</div>
+          <div class="plan-price">
+            <span class="currency"></span>
+            <span class="amount">Custom</span>
+            <span class="period"></span>
+          </div>
+          <p class="plan-desc">Full-scale deployment for large procurement divisions.</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Unlimited everything</li>
+            <li><i class="fas fa-check"></i> Custom AI model training</li>
+            <li><i class="fas fa-check"></i> Dedicated success manager</li>
+            <li><i class="fas fa-check"></i> On-premise deployment option</li>
+            <li><i class="fas fa-check"></i> SLA guarantees</li>
+            <li><i class="fas fa-check"></i> API &amp; ERP integrations</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline full-width">Consult an Architect</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="contact">
+    <div class="cta-bg">
+      <div class="cta-glow"></div>
+    </div>
+    <div class="section-container">
+      <div class="cta-content">
+        <p class="section-label">Secure Your Advantage</p>
+        <h2 class="cta-title">Stop Losing Bids to Slower Teams</h2>
+        <p class="cta-desc">
+          The window for manual procurement is closing. Deploy a EvaOps AI
+          Smart Agent and transform your tender success rate today.
+          Trusted by Fortune 500 infrastructure and defence partners.
+        </p>
+        <div class="trust-logos">
+          <span><i class="fas fa-building"></i> Infrastructure Corp</span>
+          <span><i class="fas fa-shield-alt"></i> Defence Partners</span>
+          <span><i class="fas fa-globe"></i> Global Procurement</span>
+        </div>
+        <form class="cta-form" id="cta-form">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="Your Full Name" required/>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Work Email Address" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="Company Name" required/>
+            </div>
+            <div class="form-group">
+              <select>
+                <option value="">Monthly Bid Volume</option>
+                <option>1–5 bids/month</option>
+                <option>6–20 bids/month</option>
+                <option>21–50 bids/month</option>
+                <option>50+ bids/month</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary large">
+              <i class="fas fa-rocket"></i> Request Private Access
+            </button>
+            <a href="#lifecycle" class="btn btn-ghost large">
+              <i class="fas fa-user-tie"></i> Consult an Architect
+            </a>
+          </div>
+        </form>
+        <div class="form-success" id="form-success">
+          <i class="fas fa-check-circle"></i>
+          <p>Thank you! Our team will contact you within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="logo-icon"><i class="fas fa-robot"></i></span>
+            <span class="logo-text">EvaOps AI</span>
+          </div>
+          <p>
+            Autonomous sales and tender intelligence designed to navigate
+            high-stakes procurement ecosystems. Win more. Bid smarter.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Product</h5>
+            <ul>
+              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#lifecycle">How It Works</a></li>
+              <li><a href="#strategy">Strategy Engine</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Resources</h5>
+            <ul>
+              <li><a href="#">API Docs</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Status</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 EvaOps AI Intelligence Systems. All rights reserved.</p>
+        <p>Trusted by Fortune 500 Infrastructure &amp; Defence Partners</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EvaOps | Legal Smart Contract Drafter</title>
+  <meta name="description" content="From brief to binding in minutes. AI-powered legal contract drafting that reflects your specific terms, jurisdiction, and risk profile." />
+
+  <!-- Tailwind CDN (matching original template approach) -->
+  <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- External CSS (zero inline styles) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-inter bg-surface text-white antialiased">
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+
+      <!-- Logo -->
+      <!-- CHANGE: Brand name updated from original to "EvaOps" matching img1 -->
+      <a href="#" class="navbar-logo">EvaOps</a>
+
+      <!-- Navigation links -->
+      <!-- CHANGE: Nav items updated to match legal product: Platform / Solutions / Resources / Pricing -->
+      <nav class="navbar-links" aria-label="Primary navigation">
+        <a href="#platform"  class="nav-item active">Platform</a>
+        <a href="#solutions" class="nav-item">Solutions</a>
+        <a href="#resources" class="nav-item">Resources</a>
+        <a href="#pricing"   class="nav-item">Contact</a>
+      </nav>
+
+      <!-- Right actions -->
+      <div class="navbar-actions">
+        <!-- CHANGE: "Log In" → "Client Login" (legal enterprise tone) -->
+        <button class="btn-client-login" onclick="openModal()">Client Login</button>
+        <!-- CHANGE: "Get Started" button kept, style matches img1 pill shape -->
+        <button class="btn-get-started" onclick="openModal()">Get Started</button>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#platform"  class="mobile-nav-item">Platform</a>
+      <a href="#solutions" class="mobile-nav-item">Solutions</a>
+      <a href="#resources" class="mobile-nav-item">Resources</a>
+      <a href="#pricing"   class="mobile-nav-item">Pricing</a>
+      <button class="btn-get-started w-full mt-4" onclick="openModal()">Get Started</button>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO SECTION
+       CHANGE: Full content replacement for Legal Smart Contract Drafter.
+               Background image overlay kept, text updated to match img1 exactly.
+  ═══════════════════════════════════════ -->
+  <section class="hero-section" id="platform">
+
+    <!-- Background image overlay (design unchanged) -->
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+
+      <!-- Eyebrow badge -->
+      <!-- CHANGE: "AI Platform" → "Next-Gen Legal Logic" matching img1 badge -->
+      <div class="hero-eyebrow-wrap reveal">
+        <span class="hero-eyebrow-icon" aria-hidden="true">⊙</span>
+        <span class="hero-eyebrow-text">Next-Gen Legal Logic</span>
+      </div>
+
+      <!-- Hero title -->
+      <!--
+        CHANGE: Title updated from generic AI copy to:
+        "LEGAL SMART CONTRACT DRAFTER" — exact match to img1 & img2
+      -->
+      <h1 class="hero-title reveal reveal-delay-1">
+        LEGAL SMART CONTRACT<br/>DRAFTER
+      </h1>
+
+      <!-- Hero subtitle -->
+      <!-- CHANGE: Subtitle "FROM BRIEF TO BINDING IN MINUTES" — exact match img1 -->
+      <p class="hero-subtitle reveal reveal-delay-2">FROM BRIEF TO BINDING IN MINUTES</p>
+
+      <!-- CTA buttons -->
+      <!-- CHANGE: "Deploy Now" → "Start Drafting" | "View Demo" → "Watch Demo" -->
+      <div class="hero-btns reveal reveal-delay-3">
+        <button class="btn-hero-primary" onclick="openModal()">Start Drafting</button>
+        <button class="btn-hero-secondary"
+          onclick="document.querySelector('#solutions').scrollIntoView({behavior:'smooth'})">
+          <!-- Play icon SVG (design unchanged) -->
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <polygon points="10,8 16,12 10,16"/>
+          </svg>
+          Watch Demo
+        </button>
+      </div>
+
+      <!-- Hero feature cards -->
+      <!--
+        CHANGE: Three feature cards updated to match img1 & img2:
+        Card 1: Efficiency — 4HRS → 12MIN DRAFT TIME
+        Card 2: Structural Integrity — CONSISTENT LOGIC
+        Card 3: Compliance — JURISDICTION-AWARE
+      -->
+      <div class="hero-cards reveal reveal-delay-4">
+
+        <!-- Card 1: Efficiency -->
+        <div class="hero-card">
+          <div class="hero-card-icon-wrap" aria-hidden="true">
+            <!-- Clock/efficiency icon -->
+            <svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <polyline points="9,9 9,15 12,13"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+            </svg>
+          </div>
+          <p class="hero-card-label">Efficiency</p>
+          <p class="hero-card-value">4HRS → 12MIN DRAFT TIME</p>
+        </div>
+
+        <!-- Card 2: Structural Integrity -->
+        <div class="hero-card">
+          <div class="hero-card-icon-wrap" aria-hidden="true">
+            <!-- Structure/logic icon -->
+            <svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <path d="M17.5 14v3.5M17.5 17.5H14"/>
+            </svg>
+          </div>
+          <p class="hero-card-label">Structural Integrity</p>
+          <p class="hero-card-value">CONSISTENT LOGIC</p>
+        </div>
+
+        <!-- Card 3: Compliance -->
+        <div class="hero-card">
+          <div class="hero-card-icon-wrap" aria-hidden="true">
+            <!-- Gavel/compliance icon -->
+            <svg class="hero-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9"/>
+              <path d="M16 16l2 2 4-4"/>
+              <line x1="8" y1="9" x2="16" y2="9"/>
+              <line x1="8" y1="13" x2="13" y2="13"/>
+            </svg>
+          </div>
+          <p class="hero-card-label">Compliance</p>
+          <p class="hero-card-value">JURISDICTION-AWARE</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       VALUE PROPOSITION SECTION
+       CHANGE: Content updated to legal contract drafter messaging (img1 middle section)
+  ═══════════════════════════════════════ -->
+  <section class="value-section" id="solutions">
+    <div class="value-inner">
+
+      <!-- Left: Headline -->
+      <div class="value-left reveal">
+        <!--
+          CHANGE: Headline updated to match img1:
+          "A reasoned document, not just a template."
+        -->
+        <h2 class="value-title">
+          A reasoned document,<br/>not just a template.
+        </h2>
+        <!-- Decorative rule (design unchanged) -->
+        <div class="value-rule" aria-hidden="true"></div>
+      </div>
+
+      <!-- Right: Description -->
+      <div class="value-right reveal reveal-delay-2">
+        <div class="value-desc-card">
+          <!--
+            CHANGE: Description updated to exact copy from img1 & img2:
+            "Input your deal parameters. Receive a structured, clause-complete
+            contract draft — not a template, a reasoned document that reflects
+            your specific terms, jurisdiction, and risk profile. EvaOps agents
+            analyze the underlying logic of your transaction to ensure every
+            clause serves your strategic intent."
+          -->
+          <p class="value-desc">
+            Input your deal parameters. Receive a structured, clause-complete
+            contract draft — not a template, a reasoned document that reflects
+            your specific terms, jurisdiction, and risk profile. EvaOps agents
+            analyze the underlying logic of your transaction to ensure every
+            clause serves your strategic intent.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       PROCESS / STEPS SECTION
+       CHANGE: Section header and 3-step process updated for legal drafting workflow
+  ═══════════════════════════════════════ -->
+  <section class="process-section" id="resources">
+
+    <!-- Section header -->
+    <!--
+      CHANGE: Header updated to match img1:
+      "PRECISION ENGINEERING FOR LEGAL TEAMS"
+      "Advanced logical validation for cross-border and complex agreements."
+    -->
+    <div class="process-header reveal">
+      <p class="process-eyebrow">Precision Engineering for Legal Teams</p>
+      <p class="process-sub">
+        Advanced logical validation for cross-border and complex agreements.
+      </p>
+    </div>
+
+    <!-- Three-step cards -->
+    <div class="process-cards">
+
+      <!--
+        CHANGE: Step 1 — "DATA INGESTION"
+        "We intake deal points via secure API or natural language brief,
+        mapping over 200 distinct legal variables."
+      -->
+      <div class="process-card reveal">
+        <div class="process-step-num" aria-label="Step 1">01</div>
+        <p class="process-step-label">Data Ingestion</p>
+        <p class="process-step-desc">
+          We intake deal points via secure API or natural language brief,
+          mapping over 200 distinct legal variables.
+        </p>
+      </div>
+
+      <!--
+        CHANGE: Step 2 — "LOGIC SYNTHESIS"
+        "The engine identifies conflicts, calculates indemnity caps,
+        and suggests counter-party risk mitigations automatically."
+      -->
+      <div class="process-card reveal reveal-delay-1">
+        <div class="process-step-num" aria-label="Step 2">02</div>
+        <p class="process-step-label">Logic Synthesis</p>
+        <p class="process-step-desc">
+          The engine identifies conflicts, calculates indemnity caps, and
+          suggests counter-party risk mitigations automatically.
+        </p>
+      </div>
+
+      <!--
+        CHANGE: Step 3 — "FINAL ASSEMBLY"
+        "Output a court-ready PDF or Word document with integrated version
+        control and signature workflows."
+      -->
+      <div class="process-card reveal reveal-delay-2">
+        <div class="process-step-num" aria-label="Step 3">03</div>
+        <p class="process-step-label">Final Assembly</p>
+        <p class="process-step-desc">
+          Output a court-ready PDF or Word document with integrated version
+          control and signature workflows.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CTA BANNER SECTION
+       CHANGE: Content updated to legal drafting CTA matching img1 bottom banner
+  ═══════════════════════════════════════ -->
+  <section class="cta-section" id="pricing">
+
+    <!-- Background image overlay (design unchanged) -->
+    <div class="cta-bg-overlay" aria-hidden="true"></div>
+
+    <div class="cta-inner">
+      <div class="cta-box reveal">
+
+        <!-- Left: Copy -->
+        <div class="cta-copy">
+          <!--
+            CHANGE: CTA headline updated to match img1:
+            "Ready to automate your drafting desk?"
+          -->
+          <h2 class="cta-title">
+            Ready to automate<br/>your drafting desk?
+          </h2>
+          <!--
+            CHANGE: Link text updated:
+            "View Enterprise Pricing →"
+          -->
+          <a href="#pricing" class="cta-link">
+            View Enterprise Pricing
+            <svg class="cta-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right: Button -->
+        <!--
+          CHANGE: Button label updated to "Initialize Draft" — matching img1 exactly
+        -->
+        <button class="btn-cta-main" onclick="openModal()">
+          Initialize Draft
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       CHANGE: All footer links and brand updated to EvaOps legal product
+  ═══════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <!-- CHANGE: Brand "EvaOps" with legal tagline matching img1 -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">EvaOps</a>
+          <p class="footer-tagline">
+            Precision engineered legal automation for the global elite.
+          </p>
+        </div>
+
+        <!-- Footer columns -->
+        <!-- CHANGE: Column structure matches img1: Platform / Resources / Company -->
+        <div class="footer-cols">
+
+          <!-- Platform -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Platform</h3>
+            <ul class="footer-col-links">
+              <li><a href="#platform">Smart Drafting</a></li>
+              <li><a href="#solutions">Logic Verification</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Resources</h3>
+            <ul class="footer-col-links">
+              <li><a href="#">Legal Blog</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Documentation</a></li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="footer-col">
+            <h3 class="footer-col-title">Company</h3>
+            <ul class="footer-col-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer bottom bar -->
+      <!-- CHANGE: Copyright updated to "EvaOps Automation" matching img1 -->
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 EvaOps Automation. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════
+       MODAL — Get Started / Client Login
+       CHANGE: Modal title and copy updated for legal product context
+  ═══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-box">
+
+      <button class="modal-close-btn" onclick="closeModal()" aria-label="Close">✕</button>
+
+      <!-- CHANGE: Modal eyebrow updated -->
+      <p class="modal-eyebrow">Enterprise Access</p>
+      <!-- CHANGE: Modal title updated to legal product tone -->
+      <h2 class="modal-title" id="modalHeading">Initialize Your Draft</h2>
+      <p class="modal-sub">
+        Tell us about your agreement. We'll configure your EvaOps instance
+        and run a live contract generation demo on your deal parameters.
+      </p>
+
+      <form id="draftForm" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="fullName">Full Name</label>
+            <input id="fullName" type="text" class="form-input"
+              placeholder="Alexandra Chen" required autocomplete="name"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="firm">Law Firm / Company</label>
+            <input id="firm" type="text" class="form-input"
+              placeholder="Chen &amp; Partners LLP" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="workEmail">Work Email</label>
+          <input id="workEmail" type="email" class="form-input"
+            placeholder="a.chen@chenlegal.com" required autocomplete="email"/>
+        </div>
+
+        <!-- CHANGE: Dropdown specific to legal agreement types -->
+        <div class="form-group">
+          <label class="form-label" for="agreementType">Primary Agreement Type</label>
+          <select id="agreementType" class="form-input form-select" required>
+            <option value="" disabled selected>Select agreement type...</option>
+            <option>Mergers &amp; Acquisitions (M&amp;A)</option>
+            <option>Non-Disclosure Agreement (NDA)</option>
+            <option>Service Level Agreement (SLA)</option>
+            <option>Employment &amp; Contractor Agreements</option>
+            <option>Joint Venture Agreements</option>
+            <option>Shareholder Agreements</option>
+            <option>Other / Multiple Types</option>
+          </select>
+        </div>
+
+        <!-- CHANGE: Jurisdiction field — specific to legal context -->
+        <div class="form-group">
+          <label class="form-label" for="jurisdiction">Primary Jurisdiction</label>
+          <select id="jurisdiction" class="form-input form-select" required>
+            <option value="" disabled selected>Select jurisdiction...</option>
+            <option>United Arab Emirates (DIFC)</option>
+            <option>Kingdom of Saudi Arabia</option>
+            <option>United Kingdom (English Law)</option>
+            <option>United States (Delaware)</option>
+            <option>European Union</option>
+            <option>Singapore (SIAC)</option>
+            <option>Other / Cross-border</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="dealNote">Deal Brief (Optional)</label>
+          <textarea id="dealNote" class="form-input form-textarea" rows="3"
+            placeholder="Briefly describe your transaction or agreement requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-form-submit" id="submitBtn">
+          Initialize Draft →
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- JS (separated into external file) -->
+  <script src="script.js"></script>
+</body>
+</html>
