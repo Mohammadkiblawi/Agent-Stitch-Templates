@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EvaOps Helper Agent</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">EvaOps Helper Agent</div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#analysis">Real-time Analysis</a></li>
+        <li><a href="#paths">Paths</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#login" class="nav-login">Log In</a></li>
+        <li><a href="#start" class="nav-cta">Start Learning Free</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-layer-group"></i>
+          ADAPTIVE LEARNING PLATFORM
+        </div>
+        <h1 class="hero-title">
+          Learn to Code. At Your Pace.<br/>
+          With an AI That Adapts.
+        </h1>
+        <p class="hero-desc">
+          Built for school students, career shifters, and professionals
+          who want to specialise — the EvaOps Helper Agent is an adaptive
+          coding tutor that meets you exactly where you are.
+        </p>
+        <a href="#start" class="btn btn-primary hero-btn">
+          Start Learning Free <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTELLIGENT PATHWAYS -->
+  <section class="pathways" id="pathways">
+    <div class="pathways-container">
+      <h2 class="pathways-title reveal">Intelligent Pathways to Mastery</h2>
+      <p class="pathways-desc reveal">
+        Experience a learning environment that evolves with your progress,
+        stripping away frustration and accelerating comprehension.
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURE CARDS -->
+  <section class="features" id="curriculum">
+    <div class="features-container">
+
+      <div class="feat-card reveal">
+        <div class="feat-icon-wrap">
+          <div class="feat-icon">
+            <i class="fas fa-sliders"></i>
+          </div>
+        </div>
+        <h3 class="feat-title">Adaptive Curriculum</h3>
+        <p class="feat-desc">
+          Your syllabus is never static. As you conquer concepts, the
+          pathway shifts to introduce perfectly timed challenges that
+          build on exactly what you've learned.
+        </p>
+        <div class="feat-progress-demo">
+          <div class="progress-bar">
+            <div class="progress-fill" id="prog-fill-1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feat-card active reveal" id="analysis">
+        <div class="feat-icon-wrap">
+          <div class="feat-icon">
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+        <h3 class="feat-title">Real-time Code Analysis</h3>
+        <p class="feat-desc">
+          Type seamlessly while our AI evaluates logic, syntax, and
+          optimisation, providing instant, contextual hints and
+          expert-level feedback before you even compile.
+        </p>
+        <div class="feat-status-demo">
+          <span class="status-pill ok">
+            <i class="fas fa-circle-check"></i> Status: 200 OK
+          </span>
+          <span class="status-pill ping">
+            <i class="fas fa-bolt"></i> 0ms ping
+          </span>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon-wrap">
+          <div class="feat-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+        </div>
+        <h3 class="feat-title">4× Faster Skill Acquisition</h3>
+        <p class="feat-desc">
+          Bypass the plateau. Targeted exercises reinforce weak points
+          immediately, leading to provably faster mastery compared to
+          traditional bootcamps and self-study methods.
+        </p>
+        <div class="feat-stat-demo">
+          <div class="speed-ring" id="speed-ring">
+            <svg viewBox="0 0 80 80" class="ring-svg">
+              <circle class="ring-bg" cx="40" cy="40" r="32"/>
+              <circle class="ring-progress" cx="40" cy="40" r="32" id="ring-prog"/>
+            </svg>
+            <span class="ring-label">4×</span>
+          </div>
+          <span class="feat-stat-label">Faster than traditional study</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEARNING COMPANION -->
+  <section class="companion" id="companion">
+    <div class="companion-card">
+      <div class="companion-left reveal-left">
+        <div class="companion-eyebrow">
+          <i class="fas fa-robot"></i>
+          YOUR LEARNING COMPANION
+        </div>
+        <h2 class="companion-title">
+          A tutor that actually understands you.
+        </h2>
+        <p class="companion-desc">
+          It explains concepts in plain language, detects where you're
+          stuck, adjusts difficulty in real time, and gives expert-level
+          feedback on your code without the condescension of a classroom.
+        </p>
+        <a href="#start" class="companion-link">
+          Meet Your Agent <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="companion-right reveal-right">
+        <div class="chat-demo" id="chat-demo">
+          <div class="chat-msg user" id="chat-user">
+            <div class="chat-avatar user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="chat-bubble user-bubble">
+              How does recursion work again?
+            </div>
+          </div>
+          <div class="chat-msg agent" id="chat-agent">
+            <div class="chat-bubble agent-bubble">
+              <p>
+                Imagine a set of Russian nesting dolls. Each doll contains
+                a smaller version of itself until you reach the tiniest one.
+                In code, it's a function calling itself until it hits a
+                simple "base case" that stops the loop. Let's look at
+                an example…
+              </p>
+              <div class="agent-code">
+                <pre><span class="kw">def</span> <span class="fn">factorial</span>(n):
+    <span class="kw">if</span> n <span class="op">==</span> 1:          <span class="cm"># base case</span>
+        <span class="kw">return</span> 1
+    <span class="kw">return</span> n <span class="op">*</span> <span class="fn">factorial</span>(n<span class="op">-</span>1)</pre>
+              </div>
+            </div>
+            <div class="chat-avatar agent-avatar">
+              <i class="fas fa-robot"></i>
+            </div>
+          </div>
+          <div class="chat-typing" id="chat-typing">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING PATHS -->
+  <section class="paths" id="paths">
+    <div class="paths-container">
+      <div class="paths-header reveal">
+        <span class="eyebrow">Learning Paths</span>
+        <h2 class="paths-title">Start Where You Are</h2>
+        <p class="paths-sub">
+          Whether you're writing your first line of code or deepening
+          a specialisation — there's an adaptive path built for you.
+        </p>
+      </div>
+      <div class="paths-grid">
+
+        <div class="path-card reveal">
+          <div class="path-icon school">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="path-tag school-tag">School Student</div>
+          <h3>First Steps in Code</h3>
+          <p>
+            No experience needed. Learn variables, loops, and functions
+            with guided exercises and instant AI feedback on every line
+            you write. Build real mini-projects from week one.
+          </p>
+          <ul class="path-list">
+            <li><i class="fas fa-check"></i> Python fundamentals</li>
+            <li><i class="fas fa-check"></i> Problem-solving thinking</li>
+            <li><i class="fas fa-check"></i> Mini-project portfolio</li>
+          </ul>
+          <a href="#start" class="btn btn-outline full">Start This Path</a>
+        </div>
+
+        <div class="path-card featured reveal">
+          <div class="path-badge">Most Popular</div>
+          <div class="path-icon career">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="path-tag career-tag">Career Shifter</div>
+          <h3>From Zero to Job-Ready</h3>
+          <p>
+            Structured curriculum covering everything you need to land
+            your first developer role — adaptive pacing fits your
+            schedule, whether nights, weekends, or lunch breaks.
+          </p>
+          <ul class="path-list">
+            <li><i class="fas fa-check"></i> Full-stack fundamentals</li>
+            <li><i class="fas fa-check"></i> Interview preparation</li>
+            <li><i class="fas fa-check"></i> Portfolio project guidance</li>
+          </ul>
+          <a href="#start" class="btn btn-primary full">Start This Path</a>
+        </div>
+
+        <div class="path-card reveal">
+          <div class="path-icon spec">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="path-tag spec-tag">Specialisation</div>
+          <h3>Deep Expertise</h3>
+          <p>
+            Already know the basics? Dive deep into machine learning,
+            system design, or data engineering with an AI that matches
+            your advanced level from day one.
+          </p>
+          <ul class="path-list">
+            <li><i class="fas fa-check"></i> Advanced algorithms</li>
+            <li><i class="fas fa-check"></i> Domain-specific projects</li>
+            <li><i class="fas fa-check"></i> Expert code review</li>
+          </ul>
+          <a href="#start" class="btn btn-outline full">Start This Path</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="pricing-container">
+      <div class="pricing-header reveal">
+        <span class="eyebrow">Pricing</span>
+        <h2 class="pricing-title">Start Free. Go as Far as You Want.</h2>
+        <p class="pricing-sub">
+          No credit card required to start. Upgrade when you're ready
+          to unlock the full adaptive curriculum and unlimited AI feedback.
+        </p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="p-card reveal">
+          <div class="p-tier">Free</div>
+          <div class="p-price-wrap">
+            <span class="p-amount">$0</span>
+            <span class="p-mo">/forever</span>
+          </div>
+          <p class="p-tagline">Start coding today with no commitment.</p>
+          <ul class="p-list">
+            <li><i class="fas fa-check"></i> 10 exercises/month</li>
+            <li><i class="fas fa-check"></i> Basic AI code feedback</li>
+            <li><i class="fas fa-check"></i> 1 learning path</li>
+            <li class="off"><i class="fas fa-times"></i> Adaptive curriculum</li>
+            <li class="off"><i class="fas fa-times"></i> Unlimited exercises</li>
+            <li class="off"><i class="fas fa-times"></i> Progress analytics</li>
+          </ul>
+          <a href="#start" class="btn btn-outline full">Get Started Free</a>
+        </div>
+
+        <div class="p-card featured reveal">
+          <div class="p-badge">Most Popular</div>
+          <div class="p-tier">Learner</div>
+          <div class="p-price-wrap">
+            <span class="p-cur">$</span>
+            <span class="p-amount">19</span>
+            <span class="p-mo">/mo</span>
+          </div>
+          <p class="p-tagline">For students and career shifters learning actively.</p>
+          <ul class="p-list">
+            <li><i class="fas fa-check"></i> Unlimited exercises</li>
+            <li><i class="fas fa-check"></i> Full adaptive curriculum</li>
+            <li><i class="fas fa-check"></i> Real-time code analysis</li>
+            <li><i class="fas fa-check"></i> All 3 learning paths</li>
+            <li><i class="fas fa-check"></i> Progress analytics</li>
+            <li class="off"><i class="fas fa-times"></i> 1-on-1 AI project review</li>
+          </ul>
+          <a href="#start" class="btn btn-primary full">Start Learning Free</a>
+        </div>
+
+        <div class="p-card reveal">
+          <div class="p-tier">Pro</div>
+          <div class="p-price-wrap">
+            <span class="p-cur">$</span>
+            <span class="p-amount">49</span>
+            <span class="p-mo">/mo</span>
+          </div>
+          <p class="p-tagline">For professionals pursuing deep specialisation.</p>
+          <ul class="p-list">
+            <li><i class="fas fa-check"></i> Everything in Learner</li>
+            <li><i class="fas fa-check"></i> Advanced specialisation tracks</li>
+            <li><i class="fas fa-check"></i> 1-on-1 AI project review</li>
+            <li><i class="fas fa-check"></i> Interview prep module</li>
+            <li><i class="fas fa-check"></i> Portfolio project guidance</li>
+            <li><i class="fas fa-check"></i> Priority support</li>
+          </ul>
+          <a href="#start" class="btn btn-outline full">Start Pro Trial</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- START / CTA FORM -->
+  <section class="start" id="start">
+    <div class="start-inner reveal">
+      <span class="eyebrow">Get Started</span>
+      <h2 class="start-title">Your First Lesson Is Waiting</h2>
+      <p class="start-desc">
+        No prior coding experience needed. Tell us where you are and
+        the EvaOps Helper Agent builds your personalised curriculum in seconds.
+      </p>
+      <form class="start-form" id="start-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="e.g. Alex Johnson" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@email.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>I am a…</label>
+            <select>
+              <option value="">Select your profile</option>
+              <option>School Student</option>
+              <option>Career Shifter</option>
+              <option>Working Professional</option>
+              <option>Self-taught Developer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Current Coding Level</label>
+            <select>
+              <option value="">Select your level</option>
+              <option>Complete Beginner</option>
+              <option>Some Basics</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary large">
+          Start Learning Free <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+      <div class="form-success" id="form-success">
+        <i class="fas fa-circle-check"></i>
+        <p>Welcome aboard! Check your email for your personalised curriculum link.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">EvaOps Helper Agent</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="#">About Us</a>
+        <a href="#">Contact Support</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">AI Ethics</a>
+      </nav>
+      <div class="footer-right">
+        <p>&copy; 2024 EvaOps Helper Agent. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

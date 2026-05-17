@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EvaOps Smart Reader</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-stamp logo-icon"></i>
+        <span class="logo-text">EvaOps Smart Reader</span>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#accuracy">Accuracy</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#demo" class="nav-cta">Book a Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="engine-badge">
+        <span class="engine-dot"></span>
+        EVAOPS AI
+      </div>
+      <h1 class="hero-title">Accuracy That Holds Up<br/>in Court</h1>
+      <p class="hero-desc">
+        Cross-references notarial documents against source records in seconds.
+        Catches name mismatches, date inconsistencies, and clause errors your
+        team misses under deadline pressure. Built for legal-grade accuracy.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">
+          <i class="fas fa-bullseye"></i> 99.2% Accuracy
+        </span>
+        <span class="hero-tag">
+          <i class="fas fa-bolt"></i> 40× Faster Than Manual Review
+        </span>
+        <span class="hero-tag">
+          <i class="fas fa-language"></i> Arabic / English
+        </span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#demo" class="btn btn-primary">Get Started</a>
+        <a href="#sample" class="btn btn-ghost">View Sample Report</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCURACY STATS -->
+  <section class="stats" id="accuracy">
+    <div class="stats-container">
+
+      <div class="stat-card reveal">
+        <div class="stat-card-header">
+          <i class="fas fa-shield-halved stat-icon"></i>
+          <span class="stat-label">Verified Accuracy Rate</span>
+        </div>
+        <div class="stat-value">
+          <span class="counter" data-target="99.2" data-decimal="1">0</span>
+          <span class="stat-unit">%</span>
+        </div>
+        <p class="stat-note">
+          Tested against 10M+ legal entity records across notarial deed types,
+          power of attorney documents, and corporate resolutions.
+        </p>
+      </div>
+
+      <div class="stat-card dark reveal">
+        <div class="stat-card-header">
+          <i class="fas fa-bolt stat-icon accent"></i>
+          <span class="stat-label">Faster Processing</span>
+        </div>
+        <div class="stat-value">
+          <span class="counter" data-target="40" data-decimal="0">0</span>
+          <span class="stat-unit">×</span>
+        </div>
+        <p class="stat-note">
+          Compared to manual paralegal review. Reduces multi-hour
+          document verification cycles to seconds per notarial contract.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES GRID -->
+  <section class="features" id="features">
+    <div class="features-container">
+
+      <!-- Bilingual -->
+      <div class="feature-card reveal" id="languages">
+        <div class="feature-card-top">
+          <div class="feature-icon-box">
+            <i class="fas fa-language"></i>
+          </div>
+          <h3 class="feature-title">Native Bilingual Support</h3>
+          <p class="feature-desc">
+            Seamless cross-referencing and contextual understanding across
+            Arabic and English legal texts simultaneously — no translation
+            layer required. Supports Hijri and Gregorian date formats,
+            Arabic name transliterations, and bilingual clause matching.
+          </p>
+        </div>
+        <div class="bilingual-demo">
+          <div class="doc-pill">
+            <i class="fas fa-file-pdf"></i>
+            Document_EN.pdf
+          </div>
+          <div class="swap-icon">
+            <i class="fas fa-right-left"></i>
+          </div>
+          <div class="doc-pill arabic">
+            <i class="fas fa-file-pdf"></i>
+            Document_AR.pdf
+          </div>
+        </div>
+      </div>
+
+      <!-- Precision Engine -->
+      <div class="feature-card reveal">
+        <div class="feature-card-top">
+          <div class="feature-icon-box">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3 class="feature-title">Precision Engine</h3>
+          <p class="feature-desc">
+            Entity Resolution and Chronological Consistency verification
+            to ensure zero fatal flaws in legal bindings. Reconciles
+            individual names, corporate identities, and property references
+            across every source document.
+          </p>
+        </div>
+        <div class="precision-demo">
+          <div class="confidence-row">
+            <span class="conf-label">ENTITY MATCH CONFIDENCE</span>
+            <span class="conf-value">99.8%</span>
+          </div>
+          <div class="confidence-bar">
+            <div class="confidence-fill" id="conf-fill"></div>
+          </div>
+          <div class="verification-tags">
+            <span class="vtag success">
+              <i class="fas fa-circle-check"></i> NAME VERIFIED
+            </span>
+            <span class="vtag success">
+              <i class="fas fa-circle-check"></i> DATE ALIGNED
+            </span>
+            <span class="vtag warning" id="clause-tag">
+              <i class="fas fa-triangle-exclamation"></i> CLAUSE REVIEW
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entity Resolution -->
+      <div class="feature-card reveal">
+        <div class="feature-card-top">
+          <div class="feature-icon-box">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <h3 class="feature-title">Entity Resolution</h3>
+          <p class="feature-desc">
+            Identifies and reconciles individuals, corporations, and
+            properties across multiple source documents. Flags minor
+            spelling or alias variations that could invalidate a
+            notarial deed or power of attorney.
+          </p>
+        </div>
+        <div class="entity-demo">
+          <div class="entity-row">
+            <span class="entity-src">Source Record #1294</span>
+            <span class="entity-name ok">Mohamed AL-Fayed</span>
+          </div>
+          <div class="entity-divider"></div>
+          <div class="entity-row mismatch-row">
+            <span class="entity-src">Doc Line 45</span>
+            <span class="entity-name bad">Mohamed Al-Fayed</span>
+            <span class="mismatch-flag">
+              <i class="fas fa-circle-exclamation"></i> Mismatch
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chronological Consistency -->
+      <div class="feature-card reveal">
+        <div class="feature-card-top">
+          <div class="feature-icon-box">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3 class="feature-title">Chronological Consistency</h3>
+          <p class="feature-desc">
+            Validates execution dates, effective dates, notarisation
+            timestamps, and expiration timelines against referenced
+            clauses to prevent retroactive invalidation or jurisdictional
+            compliance failures.
+          </p>
+        </div>
+        <div class="date-demo">
+          <div class="date-row">
+            <span class="date-label">Execution Date</span>
+            <span class="date-val warn-text">12 Jan 2024</span>
+            <i class="fas fa-triangle-exclamation warn-icon"></i>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Notarisation Date</span>
+            <span class="date-val ok-text">15 Jan 2024</span>
+            <i class="fas fa-circle-check ok-icon"></i>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Expiry Date</span>
+            <span class="date-val ok-text">15 Jan 2026</span>
+            <i class="fas fa-circle-check ok-icon"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SAMPLE REPORT SECTION -->
+  <section class="sample-report" id="sample">
+    <div class="sample-container">
+      <div class="sample-header reveal">
+        <span class="section-eyebrow">Live Analysis Output</span>
+        <h2 class="sample-title">What a Notary Smart Reader Report Looks Like</h2>
+        <p class="sample-subtitle">
+          Every report is generated in seconds, structured for legal review,
+          and exportable as a signed PDF audit trail.
+        </p>
+      </div>
+      <div class="report-window reveal">
+        <div class="rw-bar">
+          <div class="rw-dots">
+            <span class="rw-dot red"></span>
+            <span class="rw-dot yellow"></span>
+            <span class="rw-dot green"></span>
+          </div>
+          <span class="rw-title">Analysis Report — Deed_of_Sale_PR2023.pdf</span>
+          <span class="rw-status processing" id="rw-status">
+            <span class="rw-status-dot"></span> Processing
+          </span>
+        </div>
+        <div class="rw-body">
+          <div class="rw-left">
+            <div class="doc-skeleton">
+              <div class="sk-line full"></div>
+              <div class="sk-line full"></div>
+              <div class="sk-line med error-sk"></div>
+              <div class="sk-line full error-sk"></div>
+              <div class="sk-line short error-sk"></div>
+              <div class="sk-line full"></div>
+              <div class="sk-line med"></div>
+              <div class="sk-line full"></div>
+            </div>
+          </div>
+          <div class="rw-right">
+            <p class="rw-panel-label">AI FINDINGS</p>
+            <div class="rw-item error rw-animate" id="rw-item-1">
+              <i class="fas fa-circle-exclamation"></i>
+              <div>
+                <strong>Name Mismatch — Line 14</strong>
+                <p>"John Doe" vs "Jon Doe" compared to source record PR-2023-A.</p>
+              </div>
+            </div>
+            <div class="rw-item success rw-animate" id="rw-item-2">
+              <i class="fas fa-circle-check"></i>
+              <div>
+                <strong>Clause Alignment — Verified</strong>
+                <p>Standard indemnity clause matches certified template exactly.</p>
+              </div>
+            </div>
+            <div class="rw-item warning rw-animate" id="rw-item-3">
+              <i class="fas fa-triangle-exclamation"></i>
+              <div>
+                <strong>Date Inconsistency — Review Required</strong>
+                <p>Execution date precedes notarisation by 3 days.</p>
+              </div>
+            </div>
+            <div class="rw-progress" id="rw-progress">
+              <span>Scanning document…</span>
+              <div class="rw-prog-bar">
+                <div class="rw-prog-fill" id="rw-prog-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="pricing-container">
+      <div class="pricing-header reveal">
+        <span class="section-eyebrow">Transparent Pricing</span>
+        <h2 class="pricing-title">Plans Built for Legal Teams</h2>
+        <p class="pricing-subtitle">
+          Scalable plans for notary offices, law firms, and enterprise
+          legal departments processing bilingual notarial documents.
+        </p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card reveal">
+          <div class="plan-tier">Essentials</div>
+          <div class="plan-price-wrap">
+            <span class="plan-currency">$</span>
+            <span class="plan-price">299</span>
+            <span class="plan-cycle">/mo</span>
+          </div>
+          <p class="plan-desc">For small notary offices handling up to 100 documents per month.</p>
+          <ul class="plan-list">
+            <li><i class="fas fa-check"></i> 100 documents/month</li>
+            <li><i class="fas fa-check"></i> Name &amp; entity mismatch detection</li>
+            <li><i class="fas fa-check"></i> Date inconsistency checks</li>
+            <li><i class="fas fa-check"></i> English language support</li>
+            <li class="off"><i class="fas fa-times"></i> Arabic language support</li>
+            <li class="off"><i class="fas fa-times"></i> API access</li>
+          </ul>
+          <a href="#demo" class="btn btn-ghost full">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured reveal">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-tier">Professional</div>
+          <div class="plan-price-wrap">
+            <span class="plan-currency">$</span>
+            <span class="plan-price">799</span>
+            <span class="plan-cycle">/mo</span>
+          </div>
+          <p class="plan-desc">For active law firms processing bilingual notarial documents at scale.</p>
+          <ul class="plan-list">
+            <li><i class="fas fa-check"></i> 1,000 documents/month</li>
+            <li><i class="fas fa-check"></i> Full entity resolution engine</li>
+            <li><i class="fas fa-check"></i> Clause integrity verification</li>
+            <li><i class="fas fa-check"></i> Arabic &amp; English support</li>
+            <li><i class="fas fa-check"></i> Chronological consistency checks</li>
+            <li class="off"><i class="fas fa-times"></i> Dedicated account manager</li>
+          </ul>
+          <a href="#demo" class="btn btn-primary full">Start Free Trial</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="plan-tier">Enterprise</div>
+          <div class="plan-price-wrap">
+            <span class="plan-price">Custom</span>
+          </div>
+          <p class="plan-desc">Full deployment for large legal departments and government bodies.</p>
+          <ul class="plan-list">
+            <li><i class="fas fa-check"></i> Unlimited processing</li>
+            <li><i class="fas fa-check"></i> Custom AI fine-tuning</li>
+            <li><i class="fas fa-check"></i> Notarial seal validation</li>
+            <li><i class="fas fa-check"></i> On-premise deployment</li>
+            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+            <li><i class="fas fa-check"></i> SLA &amp; compliance guarantees</li>
+          </ul>
+          <a href="#demo" class="btn btn-ghost full">Contact Sales</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO / CTA -->
+  <section class="demo-cta" id="demo">
+    <div class="demo-cta-inner reveal">
+      <span class="section-eyebrow">Book a Demo</span>
+      <h2 class="demo-cta-title">See It Read Your Documents in Real Time</h2>
+      <p class="demo-cta-desc">
+        Upload a sample notarial document and watch the agent cross-reference,
+        flag, and report — in seconds. Legal-grade security. No setup required.
+      </p>
+      <form class="demo-form" id="demo-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="e.g. Ahmed Al-Rashidi" required />
+          </div>
+          <div class="form-group">
+            <label>Work Email</label>
+            <input type="email" placeholder="you@lawfirm.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Organisation</label>
+            <input type="text" placeholder="Law firm or notary office" required />
+          </div>
+          <div class="form-group">
+            <label>Monthly Document Volume</label>
+            <select>
+              <option value="">Select volume</option>
+              <option>Under 50 documents</option>
+              <option>50–200 documents</option>
+              <option>200–1,000 documents</option>
+              <option>1,000+ documents</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary large">
+          Book a Demo <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+      <div class="form-success" id="form-success">
+        <i class="fas fa-circle-check"></i>
+        <p>Thank you. Our team will reach out within one business day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="nav-logo">
+          <i class="fas fa-stamp logo-icon"></i>
+          <span class="logo-text">EvaOps Smart Reader</span>
+        </div>
+        <p class="footer-copy">
+          &copy; 2024 EvaOps Smart Reader. Precision document processing.
+        </p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Security</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
