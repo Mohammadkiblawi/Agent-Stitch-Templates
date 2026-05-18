@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVAOPS AGENT — Reclaim Your Strategy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <!-- SCAN LINE OVERLAY -->
+    <div class="scanline" aria-hidden="true"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="brand">
+                <span class="brand-text">EvaOps Agent</span>
+                <span class="brand-cursor">█</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#capabilities" class="nav-link" data-text="SOLUTIONS">SOLUTIONS</a>
+                <a href="#strategy" class="nav-link active" data-text="THE STRATEGY">THE STRATEGY</a>
+                <a href="#process" class="nav-link" data-text="OUR PROCESS">OUR PROCESS</a>
+                <a href="#testimonials" class="nav-link" data-text="TESTIMONIALS">TESTIMONIALS</a>
+            </div>
+            <a href="#demo" class="btn-demo nav-demo">REQUEST DEMO</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="#capabilities" class="mobile-link">SOLUTIONS</a>
+            <a href="#strategy" class="mobile-link">THE STRATEGY</a>
+            <a href="#process" class="mobile-link">OUR PROCESS</a>
+            <a href="#testimonials" class="mobile-link">TESTIMONIALS</a>
+            <a href="#demo" class="btn-demo mobile-demo">REQUEST DEMO</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <!-- Background image with overlay -->
+        <div class="hero-bg">
+            <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=85"
+                alt=""
+                class="hero-bg-img"
+                id="heroBgImg"
+                aria-hidden="true"
+            >
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-grid-overlay" aria-hidden="true"></div>
+        </div>
+
+        <!-- Terminal tags floating -->
+        <div class="hero-tags">
+            <div class="htag htag-1" id="ht1">↑ 3× MORE BIDS SUBMITTED</div>
+            <div class="htag htag-2" id="ht2">● COMPLIANCE GAPS CAUGHT EARLY</div>
+            <div class="htag htag-3" id="ht3">◌ RUNS OVERNIGHT</div>
+        </div>
+
+        <div class="hero-inner">
+            <div class="hero-content">
+                <!-- Status badge -->
+                <div class="status-badge" id="statusBadge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">SYSTEM ACTIVE</span>
+                </div>
+
+                <h1 class="hero-title" id="heroTitle">
+                    <span class="line-1">Reclaim your strategy.</span>
+                    <span class="line-2">The agent <span class="accent-text">handles the grind.</span></span>
+                </h1>
+
+                <div class="hero-desc-wrap" id="heroDesc">
+                    <div class="desc-bar"></div>
+                    <p class="hero-desc">
+                        Precision-engineered for tender compression, gap analysis, and overnight
+                        response drafting. Elevate your team from manual execution to strategic
+                        oversight.
+                    </p>
+                </div>
+
+                <!-- Keyword -->
+                <div class="keyword-line" id="keywordLine">
+                    <span class="kw-prefix">// </span>
+                    <span class="kw-text" id="kwText"></span>
+                    <span class="kw-cursor">_</span>
+                </div>
+
+                <div class="hero-actions" id="heroActions">
+                    <a href="#demo" class="btn-primary-hero">
+                        BOOK A STRATEGIC CONSULTATION
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#capabilities" class="btn-outline-hero">
+                        EXPLORE CAPABILITIES
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="capabilities" id="capabilities">
+        <div class="section-inner">
+            <div class="section-header" id="capHeader">
+                <div class="section-slash">/</div>
+                <h2 class="section-title">CAPABILITIES OVERVIEW</h2>
+            </div>
+
+            <div class="cards-grid">
+
+                <!-- Card 1: Deep Analysis -->
+                <div class="cap-card card-wide" data-delay="0" id="card1">
+                    <div class="card-inner">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="11" cy="11" r="7"/>
+                                    <path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+                                    <path d="M11 8v3l2 2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="card-bg-icon" aria-hidden="true">
+                                <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1">
+                                    <circle cx="35" cy="35" r="22"/>
+                                    <path d="M52 52l14 14" stroke-linecap="round"/>
+                                    <path d="M28 35c0-3.9 3.1-7 7-7" stroke-linecap="round"/>
+                                    <circle cx="35" cy="35" r="10"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="card-name">Deep Analysis</h3>
+                        <p class="card-desc">
+                            Reads and comprehends complex tender documents, extracting critical
+                            themes, technical requirements, and evaluation criteria with machine
+                            precision.
+                        </p>
+                        <div class="card-footer">
+                            <span class="status-operational">STATUS: OPERATIONAL</span>
+                            <div class="card-icon-sm">
+                                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+                                    <circle cx="8" cy="8" r="6"/>
+                                    <path d="M8 5v3l2 2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Compliance Shield -->
+                <div class="cap-card card-narrow" data-delay="100" id="card2">
+                    <div class="card-inner">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2l8 4v6c0 5-4 9-8 10C8 21 4 17 4 12V6l8-4z" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="card-name">Compliance Shield</h3>
+                        <p class="card-desc">
+                            Extracts all mandatory requirements and maps them to your capability
+                            matrices, ensuring zero critical omissions before drafting begins.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Gap Intelligence -->
+                <div class="cap-card card-narrow" data-delay="200" id="card3">
+                    <div class="card-inner">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 3v2M12 19v2M3 12h2M19 12h2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="alert-badge">ALERT SYSTEM</div>
+                        </div>
+                        <h3 class="card-name">Gap Intelligence</h3>
+                        <p class="card-desc">
+                            Flags missing submission items, ambiguous language, and weak
+                            value propositions against the buyer's weighted criteria matrix.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Response Architect -->
+                <div class="cap-card card-narrow" data-delay="300" id="card4">
+                    <div class="card-inner">
+                        <div class="card-top">
+                            <div class="card-icon-box">
+                              <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path class="st0" d="M4,17C4,10.4,9.4,5,16,5s12,5.4,12,12"></path> <rect x="3" y="16" class="st0" width="2" height="2"></rect> <rect x="27" y="16" class="st0" width="2" height="2"></rect> <rect x="15" y="4" class="st0" width="2" height="2"></rect> <circle class="st0" cx="4" cy="5" r="1"></circle> <circle class="st0" cx="28" cy="5" r="1"></circle> <line class="st0" x1="4" y1="5" x2="28" y2="5"></line> <path class="st0" d="M16,10l-6,9.2c1.6,1.8,2.8,4.1,3.4,6.8H16h2.6c0.6-2.7,1.8-5.1,3.4-6.8L16,10z"></path> <line class="st0" x1="16" y1="17" x2="16" y2="10.3"></line> <circle class="st0" cx="16" cy="19" r="2"></circle> <rect x="13" y="26" class="st0" width="6" height="3"></rect> </g></svg>
+                            </div>
+                        </div>
+                        <h3 class="card-name">Response Architect</h3>
+                        <p class="card-desc">
+                            Drafts highly structured, compliant response sections based on
+                            your historic winning content and the agent's structural blueprint.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Stats bar -->
+            <div class="stats-bar" id="statsBar">
+                <div class="stat-item">
+                    <div class="stat-val" data-target="3" data-suffix="×">0×</div>
+                    <div class="stat-lbl">MORE BIDS SUBMITTED</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-val" data-target="95" data-suffix="%">0%</div>
+                    <div class="stat-lbl">COMPLIANCE ACCURACY</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-val" data-target="70" data-suffix="%">0%</div>
+                    <div class="stat-lbl">TIME RECLAIMED</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-val" data-target="24" data-suffix="H">0H</div>
+                    <div class="stat-lbl">OVERNIGHT PROCESSING</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE STRATEGY -->
+    <section class="strategy" id="strategy">
+        <div class="section-inner">
+            <div class="section-header" id="stratHeader">
+                <div class="section-slash">/</div>
+                <h2 class="section-title">THE STRATEGY</h2>
+            </div>
+            <div class="strategy-grid" id="strategyGrid">
+                <div class="strategy-left">
+                    <h3 class="strategy-heading">
+                        Your team focuses on strategy.<br>
+                        <span class="accent-text">The agent handles the grind.</span>
+                    </h3>
+                    <p class="strategy-text">
+                        Most teams spend 80% of their capacity on compliance checking, gap identification,
+                        and document drafting — all before strategic thinking can even begin.
+                    </p>
+                    <p class="strategy-text">
+                        The Strategic Agent inverts this equation entirely. Upload your tender at close of business.
+                        Wake up to a complete compliance map, gap report, and draft response — ready for your experts
+                        to refine and elevate.
+                    </p>
+                    <div class="strategy-tags">
+                        <div class="s-tag">
+                            <span class="s-tag-icon">↑</span>
+                            3× MORE BIDS SUBMITTED
+                        </div>
+                        <div class="s-tag s-tag-amber">
+                            <span class="s-tag-icon">●</span>
+                            COMPLIANCE GAPS CAUGHT EARLY
+                        </div>
+                        <div class="s-tag s-tag-blue">
+                            <span class="s-tag-icon">◌</span>
+                            RUNS OVERNIGHT
+                        </div>
+                    </div>
+                </div>
+                <div class="strategy-right">
+                    <div class="terminal-window" id="terminalWindow">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="tdot red"></span>
+                                <span class="tdot yellow"></span>
+                                <span class="tdot green"></span>
+                            </div>
+                            <span class="terminal-title">agent_process.sh</span>
+                        </div>
+                        <div class="terminal-body" id="terminalBody">
+                            <div class="t-line">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd" id="tcmd1"> initializing_evaops_agent...</span>
+                            </div>
+                            <div class="t-line t-out success" id="tout1">✓ tender_document.pdf ingested [47 pages]</div>
+                            <div class="t-line t-out success" id="tout2">✓ compliance_requirements extracted [23 items]</div>
+                            <div class="t-line t-out warning" id="tout3">⚠ gaps_identified [3 critical, 7 minor]</div>
+                            <div class="t-line t-out info" id="tout4">→ drafting_response_sections [overnight]</div>
+                            <div class="t-line" id="tout5">
+                                <span class="t-prompt">$</span>
+                                <span class="t-cmd"> status</span>
+                            </div>
+                            <div class="t-line t-out success" id="tout6">✓ SYSTEM OPERATIONAL — ready for deployment</div>
+                            <div class="t-line" id="tcursor">
+                                <span class="t-prompt">$</span>
+                                <span class="blink-cursor">█</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="process" id="process">
+        <div class="section-inner">
+            <div class="section-header" id="procHeader">
+                <div class="section-slash">/</div>
+                <h2 class="section-title">OUR PROCESS</h2>
+            </div>
+            <div class="process-steps" id="processSteps">
+                <div class="process-line"></div>
+                <div class="proc-step" data-delay="0">
+                    <div class="proc-num">01</div>
+                    <div class="proc-body">
+                        <h4 class="proc-title">UPLOAD TENDER</h4>
+                        <p class="proc-desc">Upload any format — PDF, Word, or scanned images. The agent ingests it instantly.</p>
+                    </div>
+                </div>
+                <div class="proc-step" data-delay="120">
+                    <div class="proc-num">02</div>
+                    <div class="proc-body">
+                        <h4 class="proc-title">DEEP EXTRACTION</h4>
+                        <p class="proc-desc">AI reads every clause, maps requirements, identifies evaluation weightings and hidden criteria.</p>
+                    </div>
+                </div>
+                <div class="proc-step" data-delay="240">
+                    <div class="proc-num">03</div>
+                    <div class="proc-body">
+                        <h4 class="proc-title">GAP ANALYSIS</h4>
+                        <p class="proc-desc">Cross-references your submission against tender requirements. Flags every gap before it costs you the bid.</p>
+                    </div>
+                </div>
+                <div class="proc-step" data-delay="360">
+                    <div class="proc-num">04</div>
+                    <div class="proc-body">
+                        <h4 class="proc-title">OVERNIGHT DRAFT</h4>
+                        <p class="proc-desc">Complete response sections ready by morning — structured, compliant, and built on your winning history.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-inner">
+            <div class="section-header" id="testHeader">
+                <div class="section-slash">/</div>
+                <h2 class="section-title">TESTIMONIALS</h2>
+            </div>
+            <div class="test-grid" id="testGrid">
+                <div class="test-card" data-delay="0">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">
+                        The agent identified three critical compliance gaps we would have missed entirely.
+                        We won the contract. That's $4.2M we didn't leave on the table.
+                    </p>
+                    <div class="test-author">
+                        <div class="test-avatar">JR</div>
+                        <div class="test-info">
+                            <div class="test-name">JAMES ROURKE</div>
+                            <div class="test-role">Director of Bids — Infrastructure Corp</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card" data-delay="150">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">
+                        Our bid response time dropped from 3 weeks to 4 days.
+                        We're submitting 3× more tenders and winning more of them.
+                    </p>
+                    <div class="test-author">
+                        <div class="test-avatar">SM</div>
+                        <div class="test-info">
+                            <div class="test-name">SARA MITCHELL</div>
+                            <div class="test-role">Head of Procurement — TechSolutions Ltd</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card" data-delay="300">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">
+                        Overnight processing is exactly what it says. Upload at 6pm,
+                        draft response waiting at 7am. Precision-engineered is the right word.
+                    </p>
+                    <div class="test-author">
+                        <div class="test-avatar">AC</div>
+                        <div class="test-info">
+                            <div class="test-name">ALEX CHEN</div>
+                            <div class="test-role">CEO — Strategic Consulting Partners</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="demo">
+        <div class="cta-inner">
+            <div class="cta-line"></div>
+            <h2 class="cta-title" id="ctaTitle">
+                Ready to elevate your<br>procurement strategy?
+            </h2>
+            <p class="cta-desc" id="ctaDesc">
+                Initialize the next phase of your strategic operations. Deploy the agent.
+            </p>
+            <form class="cta-form" id="ctaForm" novalidate>
+                <div class="form-row">
+                    <input
+                        type="email"
+                        id="ctaEmail"
+                        class="cta-input"
+                        placeholder="ENTER YOUR WORK EMAIL"
+                        autocomplete="email"
+                        required
+                        spellcheck="false"
+                    >
+                    <button type="submit" class="btn-cta-submit">
+                        BOOK A STRATEGIC CONSULTATION
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="12" height="12" rx="1"/>
+                            <path d="M5 8h6M9 6l2 2-2 2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="form-fine">No credit card required · 14-day free trial · Cancel anytime</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <span class="footer-brand">EVAOPS AGENT</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICE</a>
+                <a href="#">CONTACT SUPPORT</a>
+            </div>
+            <div class="footer-right">
+                <span class="footer-copy">© 2024 EVAOPS AGENT. ALL SYSTEMS</span>
+                <div class="footer-status">
+                    <span class="status-dot green-dot"></span>
+                    <span>SYSTEM STATUS OPERATIONAL</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" role="alert">
+        <span class="toast-icon">✓</span>
+        <span id="toastMsg">Request submitted successfully.</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
