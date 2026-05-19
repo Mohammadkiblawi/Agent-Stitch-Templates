@@ -1,0 +1,438 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content=" Our agnet reads incoming quotation and inquiry emails, extracts the key details, and converts each one into a structured action card — automatically sorted into business categories like Pending Review, Answer Received, Awaiting Approval, and Closed. Your team sees what needs attention, not a wall of unread messages">
+    <meta name="keywords" content="email automation, AI agent, quotation processing, inquiry management, action cards, business categories, enterprise software, workflow automation, inbox management, AI extraction">
+    <title>EvaOps AI | Email Quotation Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu-overlay" class="mobile-overlay" aria-hidden="true"></div>
+
+    <!-- TopNavBar -->
+    <header class="navbar" id="navbar">
+      <nav class="nav-inner">
+        <div class="nav-logo">EvaOps AI</div>
+
+        <!-- Desktop nav -->
+        <div class="nav-links" id="nav-links">
+          <a class="nav-link nav-link--active" href="#product">Product</a>
+          <a class="nav-link" href="#solutions">Solutions</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="#categories">Categories</a>
+
+        </div>
+
+        <div class="nav-actions">
+          <div class="nav-desktop-only">
+            <button class="btn-ghost" id="login-btn">Log In</button>
+            <button class="btn-primary" id="get-started-btn">Get Started</button>
+          </div>
+          <!-- Hamburger -->
+          <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile drawer -->
+      <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <a class="mobile-nav-link" href="#product">Product</a>
+        <a class="mobile-nav-link" href="#solutions">Solutions</a>
+        <a class="mobile-nav-link" href="#categories">Categories</a>
+        <a class="mobile-nav-link" href="#contact">Contact</a>
+        <hr class="mobile-divider" />
+        <button class="btn-ghost mobile-login">Log In</button>
+        <button class="btn-primary mobile-cta">Get Started</button>
+      </div>
+    </header>
+
+    <main class="main-offset">
+
+      <!-- ═══ HERO ═══ -->
+      <section class="hero-section" id="product">
+        <div class="hero-grid">
+
+          <!-- Left -->
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Enterprise-Grade Intelligence</span>
+            <h1 class="hero-title">Email Quotation Agent</h1>
+            <p class="hero-sub">
+              An AI personality that lives inside your inbox.
+              Train it to reply to customers, request and retrieve
+              quotations, analyze incoming inquiries, or handle
+              your entire email workflow — automatically.
+              No templates. No missed emails. Just structured,
+              intelligent action
+            </p>
+
+            <!-- Feature tags -->
+            <div class="tag-row">
+              <span class="tag">Auto-Sorted Categories</span>
+              <span class="tag">Zero Missed Inquiries</span>
+              <span class="tag">Full Audit Trail</span>
+              <span class="tag tag--accent">↓ 70% Inbox Processing Time</span>
+            </div>
+
+            <div class="hero-ctas">
+              <button class="btn-primary btn-lg ripple" id="hero-demo-btn">Request Demo</button>
+              <button class="btn-outline btn-lg" id="hero-learn-btn">Learn More</button>
+            </div>
+          </div>
+
+          <!-- Right: Live Action Card Demo -->
+          <div class="card-demo reveal reveal--delay" id="action-card-demo">
+            <div class="card-demo__header">
+              <div class="card-demo__label">
+                <span class="material-symbols-outlined icon-sm">mail</span>
+                <span>Incoming Request</span>
+              </div>
+              <span class="card-demo__timer" id="demo-timer">2.4s ago</span>
+            </div>
+
+            <!-- Email snippet — cycles through examples -->
+            <div class="email-snippet" id="email-snippet">
+              <p class="email-text" id="email-text">
+                "…we are looking for a quotation for 500 units of the Enterprise-X series, delivered to our London hub by Friday."
+              </p>
+            </div>
+
+            <!-- Processing animation -->
+            <div class="processing-bar" id="processing-bar">
+              <div class="processing-bar__fill" id="processing-fill"></div>
+              <span class="processing-label">Extracting fields…</span>
+            </div>
+
+            <!-- Extraction Result -->
+            <div class="extraction-card" id="extraction-card">
+              <div class="extraction-card__head">
+                <span class="extraction-card__title">Extraction Result</span>
+                <span class="confidence-badge" id="confidence-badge">Confidence: 99.8%</span>
+              </div>
+              <div class="extraction-grid" id="extraction-grid">
+                <!-- filled by JS -->
+              </div>
+
+              <!-- Status badge -->
+              <div class="status-row">
+                <span class="status-dot status-dot--pending"></span>
+                <span class="status-label" id="status-label">Pending Review</span>
+              </div>
+
+              <button class="btn-primary btn-block ripple" id="export-btn">
+                <span class="material-symbols-outlined icon-sm">bolt</span>
+                Export to ERP
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TRUST BAR ═══ -->
+      <section class="trust-bar" aria-label="Featured in">
+        <div class="trust-bar__inner">
+          <span class="trust-logo">FORBES</span>
+          <span class="trust-logo">TECHINSIGHT</span>
+          <span class="trust-logo">DATACORP</span>
+          <span class="trust-logo">GLOBAL LOGISTICS</span>
+          <span class="trust-logo">VENTURE+</span>
+        </div>
+      </section>
+
+      <!-- ═══ FEATURES ═══ -->
+      <section class="features-section" id="solutions">
+        <div class="section-header reveal">
+          <h2 class="section-title">Engineered for Efficiency</h2>
+          <p class="section-sub">
+            Your team sees what needs attention — not a wall of unread messages.
+            Replace manual data entry with high-fidelity AI that learns your business vocabulary.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal" data-delay="0">
+            <div class="feature-icon-wrap">
+              <span class="material-symbols-outlined">security</span>
+            </div>
+            <h3 class="feature-title">Enterprise Trust</h3>
+            <p class="feature-body">
+              SOC2 Type II compliant extraction with zero data retention options
+              for sensitive correspondence.
+            </p>
+          </div>
+          <div class="feature-card reveal" data-delay="100">
+            <div class="feature-icon-wrap">
+              <span class="material-symbols-outlined">tune</span>
+            </div>
+            <h3 class="feature-title">Fully Trainable</h3>
+            <p class="feature-body">
+              Feed it your products, pricing logic, reply tone,
+              and business rules. The agent learns your vocabulary
+              and operates exactly the way you would —
+              just faster and without breaks
+            </p>
+          </div>
+          <div class="feature-card reveal" data-delay="200">
+            <div class="feature-icon-wrap">
+              <span class="material-symbols-outlined">hub</span>
+            </div>
+            <h3 class="feature-title">Semantic Logic</h3>
+            <p class="feature-body">
+              Our LLMs understand context, industry jargon, and multi-step
+              requests within a single email body.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ ACTION CARD CATEGORIES (new interactive section) ═══ -->
+      <section class="categories-section" id="categories">
+        <div class="categories-inner">
+          <div class="section-header reveal">
+            <h2 class="section-title">Auto-Sorted Action Cards</h2>
+            <p class="section-sub">
+              Every email your agent processes becomes a
+                structured action card — instantly classified,
+                prioritized, and placed in the right category.
+                Your team opens their dashboard and knows
+                exactly what to do next.
+            </p>
+          </div>
+
+          <div class="kanban-demo reveal">
+            <!-- Category tabs -->
+            <div class="kanban-tabs" role="tablist">
+              <button class="kanban-tab kanban-tab--active" role="tab" data-category="pending" aria-selected="true">
+                <span class="tab-dot tab-dot--pending"></span>Pending Review
+                <span class="tab-count" id="count-pending">3</span>
+              </button>
+              <button class="kanban-tab" role="tab" data-category="answered" aria-selected="false">
+                <span class="tab-dot tab-dot--answered"></span>Answer Received
+                <span class="tab-count" id="count-answered">5</span>
+              </button>
+              <button class="kanban-tab" role="tab" data-category="approval" aria-selected="false">
+                <span class="tab-dot tab-dot--approval"></span>Awaiting Approval
+                <span class="tab-count" id="count-approval">2</span>
+              </button>
+              <button class="kanban-tab" role="tab" data-category="closed" aria-selected="false">
+                <span class="tab-dot tab-dot--closed"></span>Closed
+                <span class="tab-count" id="count-closed">12</span>
+              </button>
+            </div>
+
+            <!-- Card list -->
+            <div class="kanban-cards" id="kanban-cards">
+              <!-- Filled by JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ WORKFLOW ═══ -->
+      <section class="workflow-section">
+        <div class="workflow-inner">
+          <!-- Text side -->
+          <div class="workflow-copy reveal">
+            <h2 class="section-title">Simple Workflow</h2>
+            <p class="feature-body">
+                Your agent sits silently between your inbox
+                and your team — reading every email, making
+                decisions, and delivering structured output
+                before anyone has opened their laptop.
+            </p>
+            <ul class="checklist">
+              <li>
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                Zero latency processing
+              </li>
+              <li>
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                Trainable per business model
+              </li>
+              <li>
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                Auto-sorted categories
+              </li>
+              <li>
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                Full audit trail
+              </li>
+              <li>
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                Automatic replies or human escalation
+              </li>
+            </ul>
+          </div>
+
+          <!-- Diagram -->
+          <div class="workflow-diagram reveal reveal--delay">
+            <div class="workflow-step">
+              <div class="step-circle step-circle--sm">
+                <span class="material-symbols-outlined">alternate_email</span>
+              </div>
+              <span class="step-label">Email Intake</span>
+            </div>
+            <div class="workflow-arrow" aria-hidden="true"></div>
+            <div class="workflow-step">
+              <div class="step-circle step-circle--lg step-circle--primary">
+                <span class="material-symbols-outlined">token</span>
+              </div>
+              <span class="step-label step-label--primary">AI EXTRACTION</span>
+            </div>
+            <div class="workflow-arrow" aria-hidden="true"></div>
+            <div class="workflow-step">
+              <div class="step-circle step-circle--sm">
+                <span class="material-symbols-outlined">view_kanban</span>
+              </div>
+              <span class="step-label">Action Card</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TESTIMONIAL ═══ -->
+      <section class="testimonial-section">
+        <div class="testimonial-inner reveal">
+          <span class="quote-mark" aria-hidden="true">"</span>
+          <blockquote class="testimonial-quote">
+            "We went from drowning in quotation emails to a clean board of
+            action cards by morning. The agent reads every inquiry, extracts
+            technical specs, and slots it into the right category — all before
+            our team even starts their shift."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img
+                alt="Marcus Thorne"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz75nI7aFTtSuXlUe_6GYDSqENLo9vnnUdT4ZyyCoXHnZYJuZlF6rsTdGAdFNzbt_bEbqJ_MMyNut8pIgfuO9uCEk3iSY4P0hZLFJM4-OzNq1OFVJYsNzqeD3jsp9AhHHYkZdbbwK2xPNEjfqsO--lG3mIQJJIfwjMwgKQiwBbHZYi0EhuuyW30F1fOCSccLwpsSwMnm2iUeTRtimuf2w6QzoDREgKbaMwEEutSfaF5f5uzaLpYM0RxfjXPU4iNHo9ZggjBe_A-kut"
+              />
+            </div>
+            <div>
+              <p class="author-name">Marcus Thorne</p>
+              <p class="author-role">VP OF OPERATIONS, NEXUS LOGISTICS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ FINAL CTA ═══ -->
+      <section class="cta-section" id="contact">
+        <div class="cta-inner reveal">
+          <h2 class="cta-title">Ready to Give Your Inbox a Brain?</h2>
+          <p class="cta-sub">
+            Join 200+ enterprise teams using our AI Email Agent
+            to handle customer service, quotations, business inquiries,
+            and retail operations — automatically, 24/7,
+            with zero emails falling through the cracks.
+          </p>
+          <div class="cta-btns">
+            <button class="btn-white btn-lg ripple">Book Strategy Call</button>
+            <button class="btn-outline-light btn-lg">View Documentation</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-logo">EvaOps AI</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">Careers</a>
+        </div>
+        <div class="footer-copy">© 2026 EvaOps AI. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <!-- ═══ MODAL — Book Strategy Call ═══ -->
+    <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal" id="strategy-modal">
+        <button class="modal__close" id="modal-close" aria-label="Close modal">
+          <span class="material-symbols-outlined icon-sm">close</span>
+        </button>
+
+        <!-- Form view -->
+        <div id="modal-form-view">
+          <p class="modal__eyebrow">Free Consultation</p>
+          <h2 class="modal__title" id="modal-title">Book a Strategy Call</h2>
+          <p class="modal__sub">Tell us about your workflow and we'll show you how EvaOps AI can cut your inbox processing time by 70%.</p>
+
+          <form class="modal-form" id="strategy-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="field-fname">First Name *</label>
+                <input class="form-input" id="field-fname" type="text" placeholder="Marcus" autocomplete="given-name" />
+                <span class="field-error" id="err-fname">Please enter your first name.</span>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="field-lname">Last Name *</label>
+                <input class="form-input" id="field-lname" type="text" placeholder="Thorne" autocomplete="family-name" />
+                <span class="field-error" id="err-lname">Please enter your last name.</span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="field-email">Work Email *</label>
+              <input class="form-input" id="field-email" type="email" placeholder="marcus@nexuslogistics.com" autocomplete="email" />
+              <span class="field-error" id="err-email">Please enter a valid work email.</span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="field-company">Company *</label>
+              <input class="form-input" id="field-company" type="text" placeholder="Nexus Logistics" autocomplete="organization" />
+              <span class="field-error" id="err-company">Please enter your company name.</span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="field-size">Team Size</label>
+              <select class="form-select" id="field-size">
+                <option value="" disabled selected>Select team size</option>
+                <option value="1-10">1 – 10 employees</option>
+                <option value="11-50">11 – 50 employees</option>
+                <option value="51-200">51 – 200 employees</option>
+                <option value="201-500">201 – 500 employees</option>
+                <option value="500+">500+ employees</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="field-message">What's your biggest email challenge?</label>
+              <textarea class="form-textarea" id="field-message" placeholder="We receive 200+ quotation emails daily and manually process each one…"></textarea>
+            </div>
+
+            <button class="btn-primary modal-submit ripple" type="submit" id="modal-submit-btn">
+              <span class="material-symbols-outlined icon-sm">calendar_month</span>
+              Book My Strategy Call
+            </button>
+          </form>
+        </div>
+
+        <!-- Success view -->
+        <div class="modal-success" id="modal-success">
+          <div class="success-icon">
+            <span class="material-symbols-outlined">check_circle</span>
+          </div>
+          <p class="success-title">You're on the calendar!</p>
+          <p class="success-sub">We've received your request and will send a calendar invite to your work email within 24 hours.</p>
+          <button class="btn-outline" id="modal-done-btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

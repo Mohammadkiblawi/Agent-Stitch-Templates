@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered sales and tender automation platform that analyzes tender documents, extracts compliance requirements, flags submission gaps, recommends products from your database, and drafts bid responses automatically.">
+    <meta name="keywords" content="AI tender agent, tender automation software, bid management AI, compliance analysis AI, proposal drafting AI, tender response automation, procurement AI, RFQ automation, sales automation AI, compliance gap detection, AI bid assistant, tender document analysis, proposal generation software, product recommendation AI">
+    <title>EvaOps AI - Win More Tenders with AI-Powered Compliance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">EvaOps AI</span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#cta" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-signin">Sign In</a>
+                <a href="#cta" class="btn-primary">Get Started</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" class="mobile-link">Features</a>
+        <a href="#how-it-works" class="mobile-link">How It Works</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="#" class="mobile-link">Sign In</a>
+        <a href="#cta" class="btn-primary mobile-cta">Get Started</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        AI-Powered Tender Management
+                    </div>
+                    <h1 class="hero-title">
+                        Win More Tenders<br>
+                        with <span class="gradient-text">AI-Powered<br>Compliance</span>
+                    </h1>
+                    <p class="hero-description">
+                        Our AI agent reads tender documents, extracts compliance requirements, analyzes financial and administrative sections, flags submission gaps, and drafts response content automatically. It also searches your internal product database to recommend matching solutions and improve bid quality.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#cta" class="btn-primary btn-large">
+                            <i class="fas fa-rocket"></i>
+                            Start Free Trial
+                        </a>
+                        <a href="#how-it-works" class="btn-secondary btn-large">
+                            <i class="fas fa-play"></i>
+                            Watch Demo
+                        </a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <i class="fas fa-check-circle"></i>
+                            No credit card required
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-check-circle"></i>
+                            14 day free trial
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-check-circle"></i>
+                            Setup in minutes
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="95">0%</div>
+                            <div class="stat-label">Compliance Accuracy</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="70">0%</div>
+                            <div class="stat-label">Time Saved</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3" data-suffix="×">0×</div>
+                            <div class="stat-label">More Bids Won</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="card-title-bar">
+                                <i class="fas fa-file-alt"></i>
+                                EvaOps AI — Live Analysis
+                            </div>
+                            <div class="ai-badge">
+                                <i class="fas fa-check-circle"></i>
+                                AI Verified
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="file-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Tender_RFP_2026_Infrastructure.pdf</span>
+                                <span class="file-pages">47 pages</span>
+                                <span class="status-badge ready">Ready</span>
+                            </div>
+                            <div class="analysis-section">
+                                <div class="analysis-label">Analysis complete</div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" data-width="100"></div>
+                                </div>
+                            </div>
+                            <div class="requirements-section">
+                                <div class="req-title">AI has found these requirements:</div>
+                                <div class="requirement-item">
+                                    <i class="fas fa-exclamation-triangle warning"></i>
+                                    Minimum 5 years experience required
+                                </div>
+                                <div class="requirement-item">
+                                    <i class="fas fa-check-circle success"></i>
+                                    ISO 9001 certification mandatory
+                                </div>
+                                <div class="requirement-item">
+                                    <i class="fas fa-calendar-alt info"></i>
+                                    Response due: March 15, 2026
+                                </div>
+                                <div class="requirement-item">
+                                    <i class="fas fa-dollar-sign info"></i>
+                                    Budget ceiling: $2.3M
+                                </div>
+                            </div>
+                            <div class="compliance-score-section">
+                                <div class="score-header">
+                                    <span>Compliance Score</span>
+                                    <span class="score-percent">78%</span>
+                                </div>
+                                <div class="score-items">
+                                    <div class="score-item">
+                                        <i class="fas fa-check-circle success"></i>
+                                        <span>Financial Statements</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <i class="fas fa-check-circle success"></i>
+                                        <span>Insurance Certificate</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <i class="fas fa-check-circle success"></i>
+                                        <span>Past Performance</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <i class="fas fa-times-circle danger"></i>
+                                        <span>ISO 9001 Certification</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <i class="fas fa-times-circle danger"></i>
+                                        <span>Technical Proposal</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer-btn">
+                                <i class="fas fa-bolt"></i>
+                                Processed in 4.2s
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating Tags -->
+                    <div class="floating-tag tag-1">
+                        <i class="fas fa-arrow-up"></i>
+                        ↑ 3× More Bids Submitted
+                    </div>
+                    <div class="floating-tag tag-2">
+                        <i class="fas fa-shield-alt"></i>
+                        Compliance Gaps Caught Early
+                    </div>
+                    <div class="floating-tag tag-3">
+                        <i class="fas fa-moon"></i>
+                        Runs Overnight
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-badge">Features</div>
+            <h2 class="section-title">
+                Everything You Need to <span class="gradient-text">Win More<br>Tenders</span>
+            </h2>
+            <p class="section-subtitle">
+                Our AI-powered platform handles the heavy lifting of tender compliance, so your team can focus on crafting winning strategies.
+            </p>
+            <div class="features-grid">
+                <div class="feature-card" data-delay="0">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-file"></i>
+                    </div>
+                    <h3>Smart Document Reading</h3>
+                    <p>AI analyzes tender documents to extract key requirements, deadlines, and evaluation criteria automatically.</p>
+                </div>
+                <div class="feature-card" data-delay="100">
+                    <div class="feature-icon green">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Compliance Extraction</h3>
+                    <p>Identifies all mandatory compliance requirements and regulatory standards you need to meet.</p>
+                </div>
+                <div class="feature-card" data-delay="200">
+                    <div class="feature-icon orange">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3>Gap Analysis</h3>
+                    <p>Flags missing information and non-compliant sections before submission deadlines.</p>
+                </div>
+                <div class="feature-card" data-delay="300">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Automated Drafting</h3>
+                    <p>Generates response sections based on your company data and past successful submissions.</p>
+                </div>
+                <div class="feature-card" data-delay="400">
+                    <div class="feature-icon blue2">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Overnight Processing</h3>
+                    <p>Upload your tender in the evening, wake up to a comprehensive compliance report and draft responses.</p>
+                </div>
+                <div class="feature-card" data-delay="500">
+                    <div class="feature-icon red">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3>Product Recommendations</h3>
+                    <p>Search your internal product or service database and recommend the most relevant offerings for each tender.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-badge">How It Works</div>
+            <h2 class="section-title">
+                From Tender Document to <span class="gradient-text">Winning<br>Submission</span> in 4 Steps
+            </h2>
+            <p class="section-subtitle">
+                The AI transforms large and complex tender packages into organized workflows, actionable insights, and ready-to-edit responses.
+            </p>
+            <div class="steps-container">
+                <div class="step-line"></div>
+                <div class="step" data-step="1">
+                    <div class="step-number">
+                        <span>1</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-label">Step 1</div>
+                        <h3>Upload Your Tender</h3>
+                        <p>Simply Upload tender files, RFPs, RFQs, and supporting documentation in PDF, Word, or scanned formats.</p>
+                        <div class="step-demo upload-demo">
+                            <div class="upload-area">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drop your tender document here</p>
+                                <span>PDF, Word, Images supported</span>
+                                <div class="upload-progress">
+                                    <div class="upload-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number purple-num">
+                        <span>2</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-label">Step 2</div>
+                        <h3>AI Analyzes</h3>
+                        <p>The AI extracts compliance rules, technical requirements, financial conditions, timelines, and evaluation criteria.</p>
+                        <div class="step-demo analyze-demo">
+                            <div class="analyze-animation">
+                                <div class="scan-line"></div>
+                                <div class="analyze-items">
+                                    <div class="analyze-item active">
+                                        <i class="fas fa-check"></i> Reading document structure
+                                    </div>
+                                    <div class="analyze-item active">
+                                        <i class="fas fa-check"></i> Extracting requirements
+                                    </div>
+                                    <div class="analyze-item processing">
+                                        <i class="fas fa-spinner fa-spin"></i> Mapping compliance criteria
+                                    </div>
+                                    <div class="analyze-item pending">
+                                        <i class="fas fa-circle"></i> Generating insights
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number blue-num">
+                        <span>3</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-label">Step 3</div>
+                        <h3>Review Compliance Report</h3>
+                        <p>Review flagged risks, missing requirements, compliance gaps, and document inconsistencies before submission.</p>
+                        <div class="step-demo report-demo">
+                            <div class="report-preview">
+                                <div class="report-header">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Compliance Report Ready</span>
+                                    <span class="report-badge">New</span>
+                                </div>
+                                <div class="report-items">
+                                    <div class="report-item gap">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <span>3 Compliance Gaps Found</span>
+                                    </div>
+                                    <div class="report-item ok">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>12 Requirements Met</span>
+                                    </div>
+                                    <div class="report-item risk">
+                                        <i class="fas fa-flag"></i>
+                                        <span>2 High-Risk Areas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number pink-num">
+                        <span>4</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-label">Step 4</div>
+                        <h3>Response Drafts</h3>
+                        <p>Generate editable response sections aligned with your company profile, capabilities, and product database.</p>
+                        <div class="step-demo draft-demo">
+                            <div class="draft-preview">
+                                <div class="draft-typing">
+                                    <span class="typing-text" id="typingText"></span>
+                                    <span class="cursor">|</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="big-stat">
+                    <div class="big-stat-number" data-target="37" data-suffix="%">0%</div>
+                    <div class="big-stat-label">Compliance Accuracy</div>
+                </div>
+                <div class="big-stat">
+                    <div class="big-stat-number" data-target="28" data-suffix="%">0%</div>
+                    <div class="big-stat-label">Time Saved</div>
+                </div>
+                <div class="big-stat">
+                    <div class="big-stat-number" data-target="1" data-suffix="×">0×</div>
+                    <div class="big-stat-label">More Bids Submitted</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="cta-bg">
+            <div class="cta-glow"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="section-badge">Start for Free Today</div>
+                <h2 class="cta-title">
+                    Ready to scale your  <span class="gradient-text"><br>Tender Operations?</span>
+                </h2>
+                <p class="cta-subtitle">
+                    Automate compliance reviews, response drafting, and tender analysis with AI-powered bid intelligence. Start your free trial today—no credit card required.
+                </p>
+                <div class="cta-form">
+                    <input type="email" placeholder="Enter your work email" class="cta-input" id="ctaEmail">
+                    <button class="btn-primary btn-cta" onclick="handleCTASubmit()">
+                        Don't Free Trial
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="cta-trust">
+                    <span><i class="fas fa-check-circle"></i> 14 day free trial</span>
+                    <span><i class="fas fa-check-circle"></i> No credit card required</span>
+                    <span><i class="fas fa-check-circle"></i> Cancel anytime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>EvaOps AI</span>
+                </div>
+                <p class="footer-copy">© 2026 All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMsg">Free trial started! Check your email.</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

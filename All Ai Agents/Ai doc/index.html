@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Upload any PDF, spreadsheet, or form. Our agent reads, validates, structures, and routes the data — automatically. No templates. No manual entry. Works in Arabic and English.">
+  <meta name="keywords" content="AI document processing, AI Excel agent, PDF automation, spreadsheet automation, document AI, OCR automation, AI form processing, Arabic document AI, bilingual AI processing, AI data extraction, PDF data extraction, Excel automation, intelligent document processing, IDP platform, AI workflow automation, scanned document processing, AI invoice extraction, automated data entry, no-template document AI, enterprise document automation">
+  <title>EvaOps AI | Intelligent Document & Spreadsheet Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="nav-logo">EvaOps AI</div>
+
+    <ul class="nav-links">
+      <li><a href="#solutions" class="active">Solutions</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#about">About</a></li>
+	  <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="btn-login">Log In</button>
+      <button class="btn-started" onclick="openModal()">Get Started</button>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="solutions">
+    <div class="hero-glow-left"></div>
+    <div class="hero-glow-right"></div>
+
+    <div class="hero-eyebrow fade-up">
+      <span class="hero-eyebrow-dot"></span>
+      AI Docs & Excel Agent
+    </div>
+
+    <h1 class="hero-title fade-up delay-1">
+      Documents That Work 
+      <span class="reimagined">Themselves</span>
+    </h1>
+
+    <p class="hero-desc fade-up delay-2">
+      Experience the convergence of AI extraction and precision data processing.
+      Upload any PDF or spreadsheet and transform it into structured, 
+      actionable intelligence — automatically.
+    </p>
+
+    <div class="hero-btns fade-up delay-3">
+      <button class="btn-primary" onclick="openModal()">
+        Get Started →
+      </button>
+      <button class="btn-secondary" onclick="document.querySelector('#workflow').scrollIntoView({behavior:'smooth'})">
+        View Demo
+      </button>
+    </div>
+
+    <!-- Hero Visual -->
+    <div class="hero-visual fade-up">
+      <div class="hero-visual-inner">
+
+        <!-- Top bar -->
+        <div class="visual-topbar">
+          <div class="visual-dot red"></div>
+          <div class="visual-dot yellow"></div>
+          <div class="visual-dot green"></div>
+          <div class="visual-title-bar">EvaOps AI — Document Intelligence Dashboard</div>
+        </div>
+
+        <!-- Visual body grid -->
+        <div class="visual-body">
+
+          <!-- Card: Extraction Stats -->
+          <div class="mini-card">
+            <div class="mini-card-header">
+              <div class="mini-card-label">Documents Processed</div>
+              <div class="mini-badge up">+12.4%</div>
+            </div>
+            <div class="mini-card-value">48,392</div>
+            <div class="mini-card-sub">This month · PDF & XLSX combined</div>
+            <div class="bar-chart">
+              <div class="bar" style="height:40%"></div>
+              <div class="bar" style="height:55%"></div>
+              <div class="bar" style="height:45%"></div>
+              <div class="bar" style="height:70%"></div>
+              <div class="bar" style="height:60%"></div>
+              <div class="bar" style="height:90%"></div>
+            </div>
+          </div>
+
+          <!-- Card: Live Processing -->
+          <div class="mini-card">
+            <div class="mini-card-header">
+              <div class="mini-card-label">Live Queue</div>
+              <div class="mini-badge cyan">● Active</div>
+            </div>
+            <div class="proc-list">
+              <div class="proc-item">
+                <div class="proc-dot cyan"></div>
+                <span class="proc-name">invoice_sep_2024.pdf</span>
+                <span class="proc-status proc">Extracting</span>
+              </div>
+              <div class="proc-item">
+                <div class="proc-dot purple"></div>
+                <span class="proc-name">balance_sheet.xlsx</span>
+                <span class="proc-status done">✓ Done</span>
+              </div>
+              <div class="proc-item">
+                <div class="proc-dot gray"></div>
+                <span class="proc-name">vendor_form_ar.pdf</span>
+                <span class="proc-status queue">Queued</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Progress bar -->
+        <div class="visual-progress-wrap">
+          <div class="visual-progress-label">
+            <span>Routing to ERP Endpoint...</span>
+            <span id="heroPct">0%</span>
+          </div>
+          <div class="visual-progress-track">
+            <div class="visual-progress-fill" id="heroPF"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       STATS STRIP
+  ══════════════════════════════════════ -->
+  <div class="stats-strip" >
+    <div class="stats-inner">
+
+      <div class="fade-up">
+        <div class="stat-number">
+          <span data-count="99.9" data-suffix="%" id="s1">99.9%</span>
+        </div>
+        <div class="stat-label">Extraction Accuracy</div>
+      </div>
+
+      <div class="fade-up delay-1">
+        <div class="stat-number">
+          <span data-count="500" data-suffix="+" id="s2">500+</span>
+        </div>
+        <div class="stat-label">Global Enterprises</div>
+      </div>
+
+      <div class="fade-up delay-2">
+        <div class="stat-number">
+          <span data-count="85" data-suffix="%" id="s3">85%</span>
+        </div>
+        <div class="stat-label">Cost Reduction</div>
+      </div>
+
+      <div class="fade-up delay-3">
+        <div class="stat-number">
+          <span data-count="14" data-suffix="ms" id="s4">14ms</span>
+        </div>
+        <div class="stat-label">Avg. Processing Latency</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       WORKFLOW / PRECISION SECTION
+  ══════════════════════════════════════ -->
+  <section class="workflow-section" id="workflow">
+
+    <div class="workflow-header fade-up">
+      <div>
+        <div class="section-eyebrow">Precision Workflow</div>
+        <div class="workflow-title">Three steps to intelligent<br/>document automation.</div>
+        <div class="workflow-sub">From raw file to structured data in under 30 seconds.</div>
+      </div>
+    </div>
+
+    <div class="workflow-cards">
+
+      <!-- Step 1: Ingestion -->
+      <div class="workflow-card fade-up">
+        <div class="workflow-card-icon material-symbols-outlined text-primary text-[32px] drop-shadow-[0_0_8px_rgba(192,193,255,0.6)]" data-icon="upload_file"">upload_file</div>
+        <div class="workflow-card-step">01 · UPLOAD</div>
+        <div class="workflow-card-title">Ingestion</div>
+        <div class="workflow-card-desc">
+          Securely stream structured and unstructured data into our neural core 
+          with enterprise-grade encryption layers. Accepts PDF, XLSX, CSV, 
+          DOCX, and scanned images — any format, any size, zero template setup.
+        </div>
+        <div class="workflow-card-link">
+          Learn More ↗
+        </div>
+      </div>
+
+      <!-- Step 2: Processing -->
+      <div class="workflow-card fade-up delay-1">
+        <div class="workflow-card-icon material-symbols-outlined text-secondary text-[32px] drop-shadow-[0_0_8px_rgba(221,183,255,0.6)]" data-icon="network_intel_node">network_intel_node</div>
+        <div class="workflow-card-step">02 · AI ENGINE</div>
+        <div class="workflow-card-title">Read & Validate</div>
+        <div class="workflow-card-desc">
+          Our AI reads every field, detects errors, cross-references
+          your business rules, and structures raw document noise
+          into clean, validated data — in Arabic or English.
+        </div>
+        <div class="workflow-card-link">
+          Learn More ↗
+        </div>
+      </div>
+
+      <!-- Step 3: Execution -->
+      <div class="workflow-card fade-up delay-2">
+        <div class="workflow-card-icon material-symbols-outlined text-tertiary text-[32px] drop-shadow-[0_0_8px_rgba(47,217,244,0.6)]" data-icon="output">output</div>
+        <div class="workflow-card-step">03 · Smart Output</div>
+        <div class="workflow-card-title">Route & Deliver</div>
+        <div class="workflow-card-desc">
+          Deliver actionable results directly to your existing tech stack via 
+          seamless API integration and automated triggers. Push to ERP, CRM, 
+          SQL warehouse, or custom endpoints instantly.
+        </div>
+        <div class="workflow-card-link">
+          Learn More ↗
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       BILINGUAL / FORMAT SECTION
+  ══════════════════════════════════════ -->
+  <section class="bilingual-section" id="about">
+
+    <div class="bilingual-grid">
+
+      <!-- English card -->
+      <div class="bilingual-card fade-up">
+        <div class="bilingual-eyebrow">Global Interface</div>
+        <h2 class="bilingual-title">Designed for<br/>Everyone.</h2>
+        <p class="bilingual-desc">
+            Our agent speaks your language — literally.
+            Process documents in Arabic or English, any dialect,
+            any script. Every PDF and Excel file handled
+            with absolute precision
+        </p>
+
+        <div class="format-badges">
+          <span class="format-badge pdf"><span class="material-symbols-outlined">docs</span> PDF</span>
+          <span class="format-badge xlsx"><span class="material-symbols-outlined">docs</span> XLSX</span>
+          <span class="format-badge csv"><span class="material-symbols-outlined">docs</span> CSV</span>
+          <span class="format-badge img"><span class="material-symbols-outlined">scan</span> Scanned</span>
+        </div>
+
+        <a href="#" class="bilingual-link">
+          Explore Capabilities →
+        </a>
+      </div>
+
+      <!-- Arabic card -->
+      <div class="bilingual-card arabic-card fade-up delay-1">
+        <div class="bilingual-eyebrow">واجهة عالمية</div>
+        <h2 class="bilingual-title">مصمم للجميع.</h2>
+        <p class="bilingual-desc">
+           وكيلنا الذكي يقرأ مستنداتك بدقة تامة — سواء كانت
+          بالعربية أو الإنجليزية. ارفع أي ملف PDF أو جدول بيانات،
+          وسيتولى الذكاء الاصطناعي القراءة والتحقق والتوجيه
+          تلقائياً. لا قوالب. لا إدخال يدوي.
+        </p>
+
+        <div class="format-badges" style="justify-content: flex-end;">
+          <span class="format-badge pdf">عربي</span>
+          <span class="format-badge xlsx">English</span>
+        </div>
+
+        <a href="#" class="bilingual-link" style="flex-direction: row-reverse;">
+          ← استكشف القدرات
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CTA SECTION
+  ══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="cta-section fade-up">
+      <div class="cta-glow-left"></div>
+      <div class="cta-glow-right"></div>
+
+      <h2 class="cta-title">Ready to stop processing manually?</h2>
+      <p class="cta-desc">
+        Join businesses already using our AI agent to eliminate
+        manual data entry — across Arabic and English documents,
+        any format, any volume.
+      </p>
+
+      <div class="cta-btns">
+        <button class="btn-cta-primary" onclick="openModal()">
+          Create Your Free Account
+        </button>
+        <button class="btn-cta-secondary" onclick="openModal()">
+          Contact Sales
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-top">
+
+      <div>
+        <div class="footer-brand-name">EvaOps AI</div>
+        <p class="footer-tagline">
+           Intelligent document processing for the modern enterprise.
+      PDF · Excel · Arabic · English.
+        </p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <div class="footer-icons">
+        <div class="footer-icon-btn" title="LinkedIn">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg fill="#000000" height="24" width="24" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            viewBox="0 0 32 32" xml:space="preserve">
+          <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13
+            c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3
+            c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13
+            c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z"/>
+          </svg>
+        </div>
+        <div class="footer-icon-btn" title="GitHub">
+          <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </div>
+        <div class="footer-icon-btn" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 1024 1024" fill="black" fill-rule="evenodd"><path d="M818 800 498.11 333.745l.546.437L787.084 0h-96.385L455.738 272 269.15 0H16.367l298.648 435.31-.036-.037L0 800h96.385l261.222-302.618L565.217 800zM230.96 72.727l448.827 654.546h-76.38L154.217 72.727z" transform="translate(103 112)"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2026 EvaOps AI. Precision processing for the intelligent enterprise.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════
+       MODAL
+  ══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+
+      <button class="modal-close" onclick="closeModal()">✕</button>
+
+      <div class="modal-eyebrow">Get Started Free</div>
+      <h3 class="modal-title">Deploy EvaOps AI</h3>
+      <p class="modal-sub">
+        Tell us about your document workflow. We'll set up your instance 
+        and run a live extraction demo on your actual files.
+      </p>
+
+      <form id="contactForm">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Rawad Zeidan"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Company</label>
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Your Company"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Work Email</label>
+          <input
+            type="email"
+            class="form-input"
+            placeholder="you@company.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Document Volume & Use Case</label>
+          <textarea
+            class="form-input form-textarea"
+            rows="3"
+            placeholder="We process 5,000+ PDF invoices and Excel reports monthly..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-form-submit">
+          Submit →
+        </button>
+      </form>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
